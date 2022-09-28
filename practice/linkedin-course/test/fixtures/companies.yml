@@ -1,0 +1,18 @@
+# == Schema Information
+#
+# Table name: companies
+#
+#  id         :integer          not null, primary key
+#  founded_on :date
+#  name       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+one:
+  name: MyString
+  founded_on: 2022-04-16
+
+two:
+  name: MyString
+  founded_on: 2022-04-16

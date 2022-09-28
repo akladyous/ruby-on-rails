@@ -1,0 +1,210 @@
+2022-07-14 16:52:26.858 EDT [9229] LOG:  starting PostgreSQL 14.2 on x86_64-apple-darwin21.3.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.30), 64-bit
+2022-07-14 16:52:26.859 EDT [9229] LOG:  listening on IPv6 address "::1", port 5432
+2022-07-14 16:52:26.859 EDT [9229] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-07-14 16:52:26.859 EDT [9229] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-07-14 16:52:26.868 EDT [9230] LOG:  database system was shut down at 2022-07-14 16:46:26 EDT
+2022-07-14 16:52:26.877 EDT [9229] LOG:  database system is ready to accept connections
+2022-07-14 16:53:31.756 EDT [9292] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 16:53:31.756 EDT [9292] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 16:53:31.756 EDT [9292] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 16:53:31.778 EDT [9292] LOG:  could not receive data from client: Connection reset by peer
+2022-07-14 16:55:07.130 EDT [9332] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 16:55:07.130 EDT [9332] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 16:55:07.130 EDT [9332] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:06:54.673 EDT [9480] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:06:54.673 EDT [9480] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:06:54.673 EDT [9480] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:07:12.593 EDT [9539] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:07:12.593 EDT [9539] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:07:12.593 EDT [9539] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:07:16.116 EDT [9543] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:07:16.116 EDT [9543] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:07:16.116 EDT [9543] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:07:54.258 EDT [9577] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:07:54.258 EDT [9577] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:07:54.258 EDT [9577] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:07:55.795 EDT [9580] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:07:55.795 EDT [9580] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:07:55.795 EDT [9580] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:08:19.460 EDT [9601] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:08:19.460 EDT [9601] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:08:19.460 EDT [9601] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:10:09.887 EDT [9631] LOG:  unexpected EOF on client connection with an open transaction
+2022-07-14 17:10:25.834 EDT [9649] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:10:25.834 EDT [9649] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:10:25.834 EDT [9649] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:12:52.081 EDT [9695] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:12:52.081 EDT [9695] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:12:52.081 EDT [9695] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:13:52.901 EDT [9724] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:13:52.901 EDT [9724] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:13:52.901 EDT [9724] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:14:08.282 EDT [9724] LOG:  could not receive data from client: Connection reset by peer
+2022-07-14 17:15:49.882 EDT [9780] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:15:49.882 EDT [9780] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:15:49.882 EDT [9780] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:15:49.910 EDT [9780] LOG:  could not receive data from client: Connection reset by peer
+2022-07-14 17:16:54.889 EDT [9812] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:16:54.889 EDT [9812] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:16:54.889 EDT [9812] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:16:54.917 EDT [9812] LOG:  could not receive data from client: Connection reset by peer
+2022-07-14 17:17:57.725 EDT [9832] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:17:57.725 EDT [9832] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:17:57.725 EDT [9832] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:18:48.221 EDT [9852] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:18:48.221 EDT [9852] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:18:48.221 EDT [9852] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:18:48.244 EDT [9852] LOG:  could not receive data from client: Connection reset by peer
+2022-07-14 17:19:06.417 EDT [9863] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:19:06.417 EDT [9863] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:19:06.417 EDT [9863] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:19:06.439 EDT [9863] LOG:  could not receive data from client: Connection reset by peer
+2022-07-14 17:19:14.160 EDT [9872] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:19:14.160 EDT [9872] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:19:14.160 EDT [9872] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:19:14.182 EDT [9872] LOG:  could not receive data from client: Connection reset by peer
+2022-07-14 17:20:00.607 EDT [9889] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:20:00.607 EDT [9889] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:20:00.607 EDT [9889] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:20:18.350 EDT [9904] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:20:18.350 EDT [9904] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:20:18.350 EDT [9904] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:22:11.340 EDT [9936] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:22:11.340 EDT [9936] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:22:11.340 EDT [9936] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:22:24.456 EDT [9954] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:22:24.456 EDT [9954] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:22:24.456 EDT [9954] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:31:23.578 EDT [10061] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:31:23.578 EDT [10061] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:31:23.578 EDT [10061] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:31:53.921 EDT [10077] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:31:53.921 EDT [10077] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:31:53.921 EDT [10077] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:31:53.938 EDT [10077] LOG:  could not receive data from client: Connection reset by peer
+2022-07-14 17:32:39.284 EDT [10093] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:32:39.284 EDT [10093] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:32:39.284 EDT [10093] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:32:39.302 EDT [10093] LOG:  could not receive data from client: Connection reset by peer
+2022-07-14 17:33:24.717 EDT [10107] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:33:24.717 EDT [10107] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:33:24.717 EDT [10107] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:33:24.739 EDT [10107] LOG:  could not receive data from client: Connection reset by peer
+2022-07-14 17:35:12.081 EDT [10135] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:35:12.081 EDT [10135] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:35:12.081 EDT [10135] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:35:12.104 EDT [10135] LOG:  could not receive data from client: Connection reset by peer
+2022-07-14 17:38:03.716 EDT [10168] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:38:03.716 EDT [10168] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:38:03.716 EDT [10168] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:38:03.743 EDT [10168] LOG:  could not receive data from client: Connection reset by peer
+2022-07-14 17:47:27.128 EDT [10335] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:47:27.128 EDT [10335] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:47:27.128 EDT [10335] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:47:56.590 EDT [10343] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:47:56.590 EDT [10343] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:47:56.590 EDT [10343] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:49:15.542 EDT [10370] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:49:15.542 EDT [10370] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:49:15.542 EDT [10370] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:49:15.558 EDT [10370] LOG:  could not receive data from client: Connection reset by peer
+2022-07-14 17:49:26.893 EDT [10386] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:49:26.893 EDT [10386] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:49:26.893 EDT [10386] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:49:26.909 EDT [10386] LOG:  could not receive data from client: Connection reset by peer
+2022-07-14 17:50:04.851 EDT [10399] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:50:04.851 EDT [10399] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:50:04.851 EDT [10399] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:50:04.866 EDT [10399] LOG:  could not receive data from client: Connection reset by peer
+2022-07-14 17:50:22.986 EDT [10409] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:50:22.986 EDT [10409] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:50:22.986 EDT [10409] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 17:57:08.817 EDT [10488] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 17:57:08.817 EDT [10488] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 17:57:08.817 EDT [10488] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 18:03:40.559 EDT [10709] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 18:03:40.559 EDT [10709] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 18:03:40.559 EDT [10709] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 18:20:32.382 EDT [11063] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 18:20:32.382 EDT [11063] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 18:20:32.382 EDT [11063] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 18:26:46.118 EDT [11150] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 18:26:46.118 EDT [11150] DETAIL:  Key (email)=(user3@milano.com) already exists.
+2022-07-14 18:26:46.118 EDT [11150] STATEMENT:  INSERT INTO users (email) VALUES ('user3@milano.com');
+2022-07-14 18:26:46.130 EDT [11151] WARNING:  there is no transaction in progress
+2022-07-14 18:27:57.108 EDT [11186] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 18:27:57.108 EDT [11186] DETAIL:  Key (email)=(user4@milano.com) already exists.
+2022-07-14 18:27:57.108 EDT [11186] STATEMENT:  INSERT INTO users (email) VALUES ('user4@milano.com');
+2022-07-14 18:27:57.121 EDT [11187] WARNING:  there is no transaction in progress
+2022-07-14 18:28:07.376 EDT [11194] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 18:28:07.376 EDT [11194] DETAIL:  Key (email)=(user5@milano.com) already exists.
+2022-07-14 18:28:07.376 EDT [11194] STATEMENT:  INSERT INTO users (email) VALUES ('user5@milano.com');
+2022-07-14 18:28:07.388 EDT [11195] WARNING:  there is no transaction in progress
+2022-07-14 18:28:16.660 EDT [11199] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 18:28:16.660 EDT [11199] DETAIL:  Key (email)=(user5@milano.com) already exists.
+2022-07-14 18:28:16.660 EDT [11199] STATEMENT:  INSERT INTO users (email) VALUES ('user5@milano.com');
+2022-07-14 18:28:16.671 EDT [11200] WARNING:  there is no transaction in progress
+2022-07-14 18:29:00.909 EDT [11232] ERROR:  syntax error at or near "RETURNING" at character 56
+2022-07-14 18:29:00.909 EDT [11232] STATEMENT:  INSERT INTO users (email) VALUES ('user7@milano.com'); RETURNING *
+2022-07-14 18:29:00.927 EDT [11233] WARNING:  there is no transaction in progress
+2022-07-14 18:29:15.873 EDT [11248] ERROR:  syntax error at or near "RETURNING" at character 56
+2022-07-14 18:29:15.873 EDT [11248] STATEMENT:  INSERT INTO users (email) VALUES ('user7@milano.com'); RETURNING email
+2022-07-14 18:29:15.887 EDT [11249] WARNING:  there is no transaction in progress
+2022-07-14 18:29:17.898 EDT [11252] ERROR:  syntax error at or near "RETURNING" at character 56
+2022-07-14 18:29:17.898 EDT [11252] STATEMENT:  INSERT INTO users (email) VALUES ('user7@milano.com'); RETURNING email
+2022-07-14 18:29:17.910 EDT [11253] WARNING:  there is no transaction in progress
+2022-07-14 18:29:18.646 EDT [11254] ERROR:  syntax error at or near "RETURNING" at character 56
+2022-07-14 18:29:18.646 EDT [11254] STATEMENT:  INSERT INTO users (email) VALUES ('user7@milano.com'); RETURNING email
+2022-07-14 18:29:18.657 EDT [11255] WARNING:  there is no transaction in progress
+2022-07-14 18:38:54.915 EDT [11366] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 18:38:54.915 EDT [11366] DETAIL:  Key (email)=(user7@milano.com) already exists.
+2022-07-14 18:38:54.915 EDT [11366] STATEMENT:  INSERT INTO users (email) VALUES ('user7@milano.com') RETURNING email;
+2022-07-14 18:38:54.929 EDT [11367] WARNING:  there is no transaction in progress
+2022-07-14 18:39:15.578 EDT [11384] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 18:39:15.578 EDT [11384] DETAIL:  Key (email)=(user8@milano.com) already exists.
+2022-07-14 18:39:15.578 EDT [11384] STATEMENT:  INSERT INTO users (email) VALUES ('user8@milano.com') RETURNING email;
+2022-07-14 18:39:15.594 EDT [11385] WARNING:  there is no transaction in progress
+2022-07-14 18:42:31.746 EDT [11441] ERROR:  duplicate key value violates unique constraint "users_email_key"
+2022-07-14 18:42:31.746 EDT [11441] DETAIL:  Key (email)=(user9@milano.com) already exists.
+2022-07-14 18:42:31.746 EDT [11441] STATEMENT:  INSERT INTO users (email) VALUES ('user9@milano.com') RETURNING *;
+2022-07-14 18:42:31.758 EDT [11442] WARNING:  there is no transaction in progress
+2022-07-14 19:05:26.743 EDT [11259] ERROR:  column "user1@milano.com" does not exist at character 93
+2022-07-14 19:05:26.743 EDT [11259] STATEMENT:  -- INSERT INTO users (email) VALUES ('user1@milano.com');
+	select * from users where email = "user1@milano.com";
+2022-07-14 19:05:36.673 EDT [11259] ERROR:  syntax error at or near ""user1@milano.com"" at character 91
+2022-07-14 19:05:36.673 EDT [11259] STATEMENT:  -- INSERT INTO users (email) VALUES ('user1@milano.com');
+	select * from users where email "user1@milano.com";
+2022-07-14 19:07:19.710 EDT [11259] ERROR:  syntax error at or near "returning" at character 54
+2022-07-14 19:07:19.710 EDT [11259] STATEMENT:  select * from users where email = 'user1@milano.com' returning email;
+2022-07-14 19:07:28.988 EDT [11259] ERROR:  syntax error at or near "returning" at character 54
+2022-07-14 19:07:28.988 EDT [11259] STATEMENT:  select * from users where email = 'user1@milano.com' returning id;
+2022-07-14 19:07:29.843 EDT [11259] ERROR:  syntax error at or near "returning" at character 54
+2022-07-14 19:07:29.843 EDT [11259] STATEMENT:  select * from users where email = 'user1@milano.com' returning id;
+2022-07-14 19:07:30.012 EDT [11259] ERROR:  syntax error at or near "returning" at character 54
+2022-07-14 19:07:30.012 EDT [11259] STATEMENT:  select * from users where email = 'user1@milano.com' returning id;
+2022-07-14 19:07:30.141 EDT [11259] ERROR:  syntax error at or near "returning" at character 54
+2022-07-14 19:07:30.141 EDT [11259] STATEMENT:  select * from users where email = 'user1@milano.com' returning id;
+2022-07-14 19:07:30.267 EDT [11259] ERROR:  syntax error at or near "returning" at character 54
+2022-07-14 19:07:30.267 EDT [11259] STATEMENT:  select * from users where email = 'user1@milano.com' returning id;
+2022-07-14 19:07:53.198 EDT [11259] ERROR:  syntax error at or near "RETURNING" at character 54
+2022-07-14 19:07:53.198 EDT [11259] STATEMENT:  select * from users where email = 'user1@milano.com' RETURNING id;
+2022-07-14 19:07:58.169 EDT [11259] ERROR:  syntax error at or near "RETURNING" at character 54
+2022-07-14 19:07:58.169 EDT [11259] STATEMENT:  select * from users where email = 'user1@milano.com' RETURNING *;
+2022-07-15 00:39:01.858 EDT [9229] LOG:  received fast shutdown request
+2022-07-15 00:39:01.858 EDT [9229] LOG:  aborting any active transactions
+2022-07-15 00:39:01.858 EDT [11259] FATAL:  terminating connection due to administrator command
+2022-07-15 00:39:01.859 EDT [9229] LOG:  background worker "logical replication launcher" (PID 9236) exited with exit code 1
+2022-07-15 00:39:01.859 EDT [9272] FATAL:  terminating connection due to administrator command
+2022-07-15 00:39:01.862 EDT [9231] LOG:  shutting down
+2022-07-15 00:39:01.867 EDT [9229] LOG:  database system is shut down
+2022-07-15 10:41:29.905 EDT [19349] LOG:  starting PostgreSQL 14.2 on x86_64-apple-darwin21.3.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.30), 64-bit
+2022-07-15 10:41:29.906 EDT [19349] LOG:  listening on IPv6 address "::1", port 5432
+2022-07-15 10:41:29.906 EDT [19349] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-07-15 10:41:29.907 EDT [19349] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-07-15 10:41:29.917 EDT [19350] LOG:  database system was shut down at 2022-07-15 01:53:58 EDT
+2022-07-15 10:41:29.928 EDT [19349] LOG:  database system is ready to accept connections
+2022-07-15 10:59:26.158 EDT [19349] LOG:  received fast shutdown request
+2022-07-15 10:59:26.158 EDT [19349] LOG:  aborting any active transactions
+2022-07-15 10:59:26.161 EDT [19349] LOG:  background worker "logical replication launcher" (PID 19356) exited with exit code 1
+2022-07-15 10:59:26.162 EDT [19351] LOG:  shutting down
+2022-07-15 10:59:26.171 EDT [19349] LOG:  database system is shut down

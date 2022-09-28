@@ -1,0 +1,10 @@
+--api
+--skip-git
+--skip-javascript
+--skip-action-mailbox
+--skip-action-cable
+--skip-webpack-install
+--skip-turbolinks
+--skip-listen
+--skip-spring
+-T

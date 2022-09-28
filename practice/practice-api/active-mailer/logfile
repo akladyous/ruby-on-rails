@@ -1,0 +1,56 @@
+2022-01-18 10:51:52.921 EST [11804] LOG:  starting PostgreSQL 14.1 on x86_64-apple-darwin21.1.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.3), 64-bit
+2022-01-18 10:51:52.922 EST [11804] LOG:  listening on IPv6 address "::1", port 5432
+2022-01-18 10:51:52.922 EST [11804] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-01-18 10:51:52.923 EST [11804] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-01-18 10:51:52.930 EST [11805] LOG:  database system was shut down at 2022-01-18 10:51:02 EST
+2022-01-18 10:51:52.945 EST [11804] LOG:  database system is ready to accept connections
+2022-01-18 10:53:25.671 EST [11823] FATAL:  database "boula" does not exist
+2022-01-18 10:54:25.678 EST [11804] LOG:  could not open file "postmaster.pid": No such file or directory
+2022-01-18 10:54:25.679 EST [11804] LOG:  performing immediate shutdown because data directory lock file is invalid
+2022-01-18 10:54:25.680 EST [11804] LOG:  received immediate shutdown request
+2022-01-18 10:54:25.680 EST [11804] LOG:  could not open file "postmaster.pid": No such file or directory
+2022-01-18 10:54:25.685 EST [11810] LOG:  could not open temporary statistics file "pg_stat/global.tmp": No such file or directory
+2022-01-18 10:54:25.688 EST [11804] LOG:  database system is shut down
+2022-01-18 10:54:33.100 EST [11852] LOG:  starting PostgreSQL 14.1 on x86_64-apple-darwin21.1.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.3), 64-bit
+2022-01-18 10:54:33.101 EST [11852] LOG:  listening on IPv6 address "::1", port 5432
+2022-01-18 10:54:33.101 EST [11852] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-01-18 10:54:33.101 EST [11852] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-01-18 10:54:33.105 EST [11853] LOG:  database system was shut down at 2022-01-18 10:54:06 EST
+2022-01-18 10:54:33.116 EST [11852] LOG:  database system is ready to accept connections
+2022-01-18 10:54:51.607 EST [11864] FATAL:  role "boula" does not exist
+2022-01-18 10:57:54.132 EST [11895] FATAL:  role "boula" does not exist
+2022-01-18 10:57:57.246 EST [11900] FATAL:  role "boula" does not exist
+2022-01-18 11:02:31.132 EST [11937] FATAL:  role "boula" does not exist
+2022-01-18 11:03:04.610 EST [11943] FATAL:  role "boula" does not exist
+2022-01-18 11:03:19.226 EST [11948] FATAL:  database "user" does not exist
+2022-01-18 11:10:13.099 EST [11955] ERROR:  syntax error at or near "createuser" at character 1
+2022-01-18 11:10:13.099 EST [11955] STATEMENT:  createuser -U postgres 
+	DROP ROLE USER
+	DROP ROLE USER
+	DROP ROLE user
+	DROP ROLE USER
+	DROP ROLE user;
+2022-01-18 11:10:21.554 EST [11955] ERROR:  syntax error at or near "user" at character 11
+2022-01-18 11:10:21.554 EST [11955] STATEMENT:  DROP ROLE user;
+2022-01-18 11:10:25.656 EST [11955] ERROR:  syntax error at or near "USER" at character 11
+2022-01-18 11:10:25.656 EST [11955] STATEMENT:  DROP ROLE USER;
+2022-01-18 11:10:39.413 EST [11955] ERROR:  syntax error at or near "USER" at character 11
+2022-01-18 11:10:39.413 EST [11955] STATEMENT:  DROP ROLE USER;
+2022-01-18 11:10:57.858 EST [11955] ERROR:  syntax error at or near "USER" at character 11
+2022-01-18 11:10:57.858 EST [11955] STATEMENT:  DROP ROLE USER;
+2022-01-18 11:12:01.427 EST [12006] FATAL:  database "user" does not exist
+2022-01-18 11:15:05.250 EST [12011] ERROR:  syntax error at or near "dropuser" at character 1
+2022-01-18 11:15:05.250 EST [12011] STATEMENT:  dropuser user
+	dropuser user
+	dropuser user;
+2022-01-18 11:24:32.255 EST [12107] ERROR:  syntax error at or near "user" at character 11
+2022-01-18 11:24:32.255 EST [12107] STATEMENT:  drop role user;
+2022-01-18 11:30:44.160 EST [12138] FATAL:  role "boula" does not exist
+2022-01-18 11:54:21.050 EST [13405] FATAL:  role "boula" does not exist
+2022-01-18 11:55:50.674 EST [13422] FATAL:  role "boula" does not exist
+2022-01-18 12:00:34.479 EST [11852] LOG:  server process (PID 13629) was terminated by signal 9: Killed: 9
+2022-01-18 12:00:34.480 EST [11852] LOG:  terminating any other active server processes
+2022-01-18 12:00:34.484 EST [11852] LOG:  all server processes terminated; reinitializing
+2022-01-18 12:00:34.498 EST [11852] LOG:  startup process (PID 13630) was terminated by signal 9: Killed: 9
+2022-01-18 12:00:34.498 EST [11852] LOG:  aborting startup due to startup process failure
+2022-01-18 12:00:34.499 EST [11852] LOG:  database system is shut down

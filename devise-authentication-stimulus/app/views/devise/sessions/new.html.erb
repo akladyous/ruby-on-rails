@@ -1,0 +1,57 @@
+<div class="container w-50 border rounded mt-5">
+	<%= form_for(resource, as: resource_name, url: session_path(resource_name), local: true ,data: { controller: 'validate', validate_target: 'form'} ,:html => {class: "g1"}) do |f| %>
+		<div class="form-group">
+			<%= f.label :email, class: "form-label" %>
+			<div class="input-group">
+				<%= f.email_field :email,
+                    autofocus: true,
+                    autocomplete: "email",
+                    class: "form-control",
+                    data: {
+                        validate_target: 'input',
+                        action: "change->validate#handleChange",
+                        validate: {
+                            presence: {message: '^Email is required'},
+                            email: {message: '^Email is invalid'}
+                        }
+                    }
+                %>
+			</div>
+		</div>
+		<div class="form-group">
+			<%= f.label :password, class: "form-label"  %>
+			<%= f.password_field :password,
+                autocomplete: "current-password",
+                class: "form-control",
+                aria: { describedby: "inputGroupPrepend" },
+                data: {
+                    validate_target: 'input',
+                    action: "change->validate#handleChange",
+                    validate: {
+                        presence: {message: '^Password is required'},
+                        length: {minimum:6, maximum: 64, message: '^Password must be between 6 and 64 characters'}
+                    }
+                }
+            %>
+		</div>
+		<div class="form-group">
+			<% if devise_mapping.rememberable? %>
+				<div class="form-check>
+					<%= f.check_box :remember_me, class: "form-check-input" %>
+					<%= f.label :remember_me, class: "form-check-label" %>
+				</div>
+			<% end %>
+		</div>
+		<div class="actions">
+			<%= f.submit "Log in", data: { action: 'validate#handleForm'} %>
+		</div>
+	<% end %>
+	<% if resource.errors.any? %>
+		<div class="invalid-feedback">
+			<%= resource.errors.full_messages.first %>
+		</div>
+	<% end %>
+	<div class="validation-errors"></div>
+	<%= render "devise/shared/error_messages" %>
+	<%= render "devise/shared/links" %>
+</div>

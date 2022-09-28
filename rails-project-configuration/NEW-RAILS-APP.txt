@@ -1,0 +1,30 @@
+rails new rails-user-authentication --database=postgresql -j esbuild --css bootstrap
+yarn run build:css 
+bin/dev
+
+RAILS_ENV=development
+
+rake tmp:cache:clear
+rails assets:clobber
+rails assets:precompile
+
+rails assets:clobber && rails assets:precompile && bin/dev
+rails assets:clobber && rails assets:precompile &&  rm -rf ./public/assets  && bin/dev
+
+bin/rails db:environment:set RAILS_ENV=development
+rails stimulus:manifest:update
+
+rails g controller home index --skip-helper --skip-test-framework
+-------------------------------------------------------
+gem install rubygems-update
+update_rubygems
+
+gem update --system
+gem install bundler
+
+https://bundler.io/
+bundle update --bundler
+bundle-clean
+-------------------------------------------------------
+
+EDITOR="code --wait" bin/rails credentials:edit --environment development

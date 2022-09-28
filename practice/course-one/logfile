@@ -1,0 +1,182 @@
+2022-03-14 00:28:33.658 EDT [16126] LOG:  starting PostgreSQL 14.2 on x86_64-apple-darwin21.3.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.30), 64-bit
+2022-03-14 00:28:33.659 EDT [16126] LOG:  listening on IPv6 address "::1", port 5432
+2022-03-14 00:28:33.659 EDT [16126] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-03-14 00:28:33.659 EDT [16126] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-03-14 00:28:33.672 EDT [16127] LOG:  database system was shut down at 2022-03-13 22:21:57 EDT
+2022-03-14 00:28:33.685 EDT [16126] LOG:  database system is ready to accept connections
+2022-03-14 11:04:24.599 EDT [18169] ERROR:  relation "admins" does not exist
+2022-03-14 11:04:24.599 EDT [18169] STATEMENT:  ALTER TABLE "utentis" ADD CONSTRAINT "fk_rails_5d6a8eb635"
+	FOREIGN KEY ("admin_id")
+	  REFERENCES "admins" ("id")
+	
+2022-03-14 11:05:15.695 EDT [18225] ERROR:  relation "managers" does not exist
+2022-03-14 11:05:15.695 EDT [18225] STATEMENT:  ALTER TABLE "utentis" ADD CONSTRAINT "fk_rails_6255da0f99"
+	FOREIGN KEY ("manager_id")
+	  REFERENCES "managers" ("id")
+	
+2022-03-14 11:07:51.293 EDT [18329] ERROR:  relation "managers" does not exist
+2022-03-14 11:07:51.293 EDT [18329] STATEMENT:  ALTER TABLE "utentis" ADD CONSTRAINT "fk_rails_6255da0f99"
+	FOREIGN KEY ("manager_id")
+	  REFERENCES "managers" ("id")
+	
+2022-03-14 14:59:24.189 EDT [22207] ERROR:  column "post_id" does not exist at character 14
+2022-03-14 14:59:24.189 EDT [22207] HINT:  Perhaps you meant to reference the column "posts.post".
+2022-03-14 14:59:24.189 EDT [22207] STATEMENT:  SELECT COUNT(post_id) FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id"
+2022-03-14 15:00:14.037 EDT [22207] ERROR:  column "post_id" does not exist at character 14
+2022-03-14 15:00:14.037 EDT [22207] HINT:  Perhaps you meant to reference the column "posts.post".
+2022-03-14 15:00:14.037 EDT [22207] STATEMENT:  SELECT COUNT(post_id) AS "count_post_id", "post" AS "post" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "post"
+2022-03-14 15:00:41.065 EDT [22207] ERROR:  column "posts_id" does not exist at character 14
+2022-03-14 15:00:41.065 EDT [22207] STATEMENT:  SELECT COUNT(posts_id) AS "count_posts_id", "post" AS "post" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "post"
+2022-03-14 15:01:04.090 EDT [22207] ERROR:  column posts.post_id does not exist at character 37
+2022-03-14 15:01:04.090 EDT [22207] HINT:  Perhaps you meant to reference the column "posts.post".
+2022-03-14 15:01:04.090 EDT [22207] STATEMENT:  SELECT "posts".* FROM "posts" WHERE "posts"."post_id" = $1
+2022-03-14 15:02:12.567 EDT [22207] ERROR:  column "authors.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-03-14 15:02:12.567 EDT [22207] STATEMENT:  SELECT "authors".* FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "post"
+2022-03-14 15:02:22.244 EDT [22207] ERROR:  column "posts_id" does not exist at character 14
+2022-03-14 15:02:22.244 EDT [22207] STATEMENT:  SELECT COUNT(posts_id) AS "count_posts_id", "post" AS "post" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "post"
+2022-03-14 15:03:35.396 EDT [22207] ERROR:  column "authors.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-03-14 15:03:35.396 EDT [22207] STATEMENT:  SELECT "authors".* FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "authors"."name"
+2022-03-14 15:03:52.419 EDT [22207] ERROR:  column "posts_id" does not exist at character 14
+2022-03-14 15:03:52.419 EDT [22207] STATEMENT:  SELECT COUNT(posts_id) AS "count_posts_id", "authors"."name" AS "authors_name" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "authors"."name"
+2022-03-14 15:03:56.869 EDT [22207] ERROR:  column "post_id" does not exist at character 14
+2022-03-14 15:03:56.869 EDT [22207] HINT:  Perhaps you meant to reference the column "posts.post".
+2022-03-14 15:03:56.869 EDT [22207] STATEMENT:  SELECT COUNT(post_id) AS "count_post_id", "authors"."name" AS "authors_name" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "authors"."name"
+2022-03-14 15:03:58.963 EDT [22207] ERROR:  column "posts_id" does not exist at character 14
+2022-03-14 15:03:58.963 EDT [22207] STATEMENT:  SELECT COUNT(posts_id) AS "count_posts_id", "authors"."name" AS "authors_name" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "authors"."name"
+2022-03-14 15:03:59.865 EDT [22207] ERROR:  column "posts_id" does not exist at character 14
+2022-03-14 15:03:59.865 EDT [22207] STATEMENT:  SELECT COUNT(posts_id) AS "count_posts_id", "authors"."name" AS "authors_name" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "authors"."name"
+2022-03-14 15:06:34.032 EDT [22207] ERROR:  column "authors.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-03-14 15:06:34.032 EDT [22207] STATEMENT:  SELECT "authors".* FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "authors"."name"
+2022-03-14 15:06:40.093 EDT [22207] ERROR:  column "authors.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-03-14 15:06:40.093 EDT [22207] STATEMENT:  SELECT "authors".* FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "authors"."name"
+2022-03-14 15:06:43.840 EDT [22207] ERROR:  column "authors.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-03-14 15:06:43.840 EDT [22207] STATEMENT:  SELECT "authors".* FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "authors"."name"
+2022-03-14 15:10:00.602 EDT [22207] ERROR:  column "posts_id" does not exist at character 14
+2022-03-14 15:10:00.602 EDT [22207] STATEMENT:  SELECT COUNT(posts_id) AS "count_posts_id", "authors"."name" AS "authors_name" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "authors"."name"
+2022-03-14 15:10:29.157 EDT [22207] ERROR:  column "post_id" does not exist at character 14
+2022-03-14 15:10:29.157 EDT [22207] HINT:  Perhaps you meant to reference the column "posts.post".
+2022-03-14 15:10:29.157 EDT [22207] STATEMENT:  SELECT COUNT(post_id) AS "count_post_id", "authors"."name" AS "authors_name" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "authors"."name"
+2022-03-14 15:12:15.518 EDT [22207] ERROR:  column authors.author_id does not exist at character 105
+2022-03-14 15:12:15.518 EDT [22207] STATEMENT:  SELECT "authors".* FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" WHERE "authors"."author_id" = $1 GROUP BY "authors"."name"
+2022-03-14 15:12:19.580 EDT [22207] ERROR:  column authors.author_id does not exist at character 105
+2022-03-14 15:12:19.580 EDT [22207] STATEMENT:  SELECT "authors".* FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" WHERE "authors"."author_id" = $1 GROUP BY "authors"."name"
+2022-03-14 15:12:44.388 EDT [22207] ERROR:  column "authors.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-03-14 15:12:44.388 EDT [22207] STATEMENT:  SELECT "authors".* FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" WHERE (author_id > 0) GROUP BY "authors"."name"
+2022-03-14 15:13:11.198 EDT [22207] ERROR:  aggregate functions are not allowed in WHERE at character 106
+2022-03-14 15:13:11.198 EDT [22207] STATEMENT:  SELECT "authors".* FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" WHERE (count(author_id) > 0) GROUP BY "authors"."name"
+2022-03-14 15:14:01.198 EDT [22207] ERROR:  column "posts_id" does not exist at character 14
+2022-03-14 15:14:01.198 EDT [22207] STATEMENT:  SELECT COUNT(posts_id) AS "count_posts_id", "authors"."name" AS "authors_name" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "authors"."name"
+2022-03-14 15:15:16.995 EDT [22207] ERROR:  column authors.author_id does not exist at character 105
+2022-03-14 15:15:16.995 EDT [22207] STATEMENT:  SELECT "authors".* FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" WHERE "authors"."author_id" = $1 GROUP BY "authors"."name"
+2022-03-14 15:15:26.597 EDT [22207] ERROR:  column "authors.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-03-14 15:15:26.597 EDT [22207] STATEMENT:  SELECT "authors".* FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "authors"."name"
+2022-03-14 15:15:42.090 EDT [22207] ERROR:  column authors.author_id does not exist at character 105
+2022-03-14 15:15:42.090 EDT [22207] STATEMENT:  SELECT "authors".* FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" WHERE "authors"."author_id" = $1
+2022-03-14 15:15:49.387 EDT [22207] ERROR:  column authors.author_id does not exist at character 105
+2022-03-14 15:15:49.387 EDT [22207] STATEMENT:  SELECT "authors".* FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" WHERE "authors"."author_id" = $1 GROUP BY "authors"."name"
+2022-03-14 15:24:07.142 EDT [22207] ERROR:  syntax error at or near "FROM" at character 32
+2022-03-14 15:24:07.142 EDT [22207] STATEMENT:  SELECT author.*, count(posts.* FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id"
+2022-03-14 15:24:21.269 EDT [22207] ERROR:  syntax error at or near "FROM" at character 32
+2022-03-14 15:24:21.269 EDT [22207] STATEMENT:  SELECT author.*, count(posts.* FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY author_id
+2022-03-14 15:26:32.749 EDT [22207] ERROR:  missing FROM-clause entry for table "author" at character 8
+2022-03-14 15:26:32.749 EDT [22207] STATEMENT:  SELECT author.name, author.id FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id"
+2022-03-14 15:27:00.950 EDT [22207] ERROR:  column "authors.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-03-14 15:27:00.950 EDT [22207] STATEMENT:  SELECT "authors"."id", "authors"."name" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "authors"."name"
+2022-03-14 15:29:30.072 EDT [22207] ERROR:  column "post_id" does not exist at character 14
+2022-03-14 15:29:30.072 EDT [22207] HINT:  Perhaps you meant to reference the column "posts.post".
+2022-03-14 15:29:30.072 EDT [22207] STATEMENT:  SELECT COUNT(post_id) FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id"
+2022-03-14 15:29:33.499 EDT [22207] ERROR:  column "posts_id" does not exist at character 14
+2022-03-14 15:29:33.499 EDT [22207] STATEMENT:  SELECT COUNT(posts_id) FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id"
+2022-03-14 15:30:38.863 EDT [22207] ERROR:  column "posts_id" does not exist at character 8
+2022-03-14 15:30:38.863 EDT [22207] STATEMENT:  SELECT "posts_id" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id"
+2022-03-14 15:30:41.916 EDT [22207] ERROR:  column "posts_id" does not exist at character 14
+2022-03-14 15:30:41.916 EDT [22207] STATEMENT:  SELECT COUNT(posts_id) FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id"
+2022-03-14 15:39:45.280 EDT [22207] ERROR:  syntax error at or near "NULL" at character 115
+2022-03-14 15:39:45.280 EDT [22207] STATEMENT:  SELECT "posts"."id" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" WHERE (post_id NULL)
+2022-03-14 15:40:31.860 EDT [22207] ERROR:  syntax error at or near "NULL" at character 116
+2022-03-14 15:40:31.860 EDT [22207] STATEMENT:  SELECT "posts"."id" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" WHERE (posts_id NULL)
+2022-03-14 15:41:32.680 EDT [22207] ERROR:  column "posts.post" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-03-14 15:41:32.680 EDT [22207] STATEMENT:  SELECT posts.post, posts.id FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "authors"."id"
+2022-03-14 15:41:35.699 EDT [22207] ERROR:  column "posts.id" must appear in the GROUP BY clause or be used in an aggregate function at character 20
+2022-03-14 15:41:35.699 EDT [22207] STATEMENT:  SELECT posts.post, posts.id FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY post
+2022-03-14 15:43:33.751 EDT [22207] ERROR:  missing FROM-clause entry for table "author" at character 8
+2022-03-14 15:43:33.751 EDT [22207] STATEMENT:  SELECT author.name, COUNT(posts.id) FROM "authors" INNER JOIN "posts" ON "posts"."author_id" = "authors"."id"
+2022-03-14 15:43:50.876 EDT [22207] ERROR:  missing FROM-clause entry for table "author" at character 8
+2022-03-14 15:43:50.876 EDT [22207] STATEMENT:  SELECT author.name, COUNT(posts.id) as post_counts FROM "authors" INNER JOIN "posts" ON "posts"."author_id" = "authors"."id"
+2022-03-14 15:44:08.763 EDT [22207] ERROR:  missing FROM-clause entry for table "author" at character 8
+2022-03-14 15:44:08.763 EDT [22207] STATEMENT:  SELECT author.name, COUNT(posts.id) as post_counts FROM "authors" INNER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY author_id
+2022-03-14 15:44:40.932 EDT [22207] ERROR:  missing FROM-clause entry for table "author" at character 8
+2022-03-14 15:44:40.932 EDT [22207] STATEMENT:  SELECT author.name, COUNT(posts.id) as post_counts FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY author_id
+2022-03-14 15:44:55.274 EDT [22380] ERROR:  missing FROM-clause entry for table "author" at character 8
+2022-03-14 15:44:55.274 EDT [22380] STATEMENT:  SELECT author.name, COUNT(posts.id) as post_counts FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY author_id   
+	
+2022-03-14 15:48:42.286 EDT [22207] ERROR:  missing FROM-clause entry for table "author" at character 8
+2022-03-14 15:48:42.286 EDT [22207] STATEMENT:  SELECT author.name, COUNT(posts.id) as post_counts FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY author_id
+2022-03-14 15:48:46.055 EDT [22207] ERROR:  missing FROM-clause entry for table "author" at character 8
+2022-03-14 15:48:46.055 EDT [22207] STATEMENT:  SELECT author.name, COUNT(posts.id) FROM "authors" INNER JOIN "posts" ON "posts"."author_id" = "authors"."id"
+2022-03-14 15:55:44.744 EDT [22207] ERROR:  column "authors.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-03-14 15:55:44.744 EDT [22207] STATEMENT:  SELECT "authors".* FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "authors"."name"
+2022-03-14 15:55:52.418 EDT [22207] ERROR:  column "posts_id" does not exist at character 14
+2022-03-14 15:55:52.418 EDT [22207] STATEMENT:  SELECT COUNT(posts_id) AS "count_posts_id", "authors"."name" AS "authors_name" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "authors"."name"
+2022-03-14 15:56:11.594 EDT [22207] ERROR:  column posts.posts_id does not exist at character 14
+2022-03-14 15:56:11.594 EDT [22207] STATEMENT:  SELECT COUNT("posts"."posts_id") AS "count_posts_posts_id", "authors"."name" AS "authors_name" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "authors"."name"
+2022-03-14 15:58:45.164 EDT [22207] ERROR:  syntax error at or near "NULL" at character 115
+2022-03-14 15:58:45.164 EDT [22207] STATEMENT:  SELECT "posts"."id" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" WHERE (post.id NULL)
+2022-03-14 15:59:53.838 EDT [22207] ERROR:  syntax error at or near "nil" at character 115
+2022-03-14 15:59:53.838 EDT [22207] STATEMENT:  SELECT "posts"."id" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" WHERE (post.id nil)
+2022-03-14 16:00:13.468 EDT [22207] ERROR:  syntax error at or near "NULL" at character 122
+2022-03-14 16:00:13.468 EDT [22207] STATEMENT:  SELECT COUNT("posts"."id") FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" WHERE (post.id NULL)
+2022-03-14 16:00:56.922 EDT [22207] ERROR:  syntax error at or near "1" at character 115
+2022-03-14 16:00:56.922 EDT [22207] STATEMENT:  SELECT "posts"."id" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" WHERE (post.id 1)
+2022-03-14 16:01:09.639 EDT [22207] ERROR:  syntax error at or near "NULL" at character 115
+2022-03-14 16:01:09.639 EDT [22207] STATEMENT:  SELECT "posts"."id" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" WHERE (post.id NULL)
+2022-03-14 16:01:13.669 EDT [22207] ERROR:  syntax error at or near "NULL" at character 115
+2022-03-14 16:01:13.669 EDT [22207] STATEMENT:  SELECT "posts"."id" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" WHERE (post.id NULL) GROUP BY "authors"."name"
+2022-03-14 16:02:00.931 EDT [22207] ERROR:  missing FROM-clause entry for table "author" at character 8
+2022-03-14 16:02:00.931 EDT [22207] STATEMENT:  SELECT author.name, posts.id FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id"
+2022-03-14 16:02:07.562 EDT [22207] ERROR:  missing FROM-clause entry for table "author" at character 8
+2022-03-14 16:02:07.562 EDT [22207] STATEMENT:  SELECT "author"."name" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id"
+2022-03-14 16:02:32.152 EDT [22207] ERROR:  missing FROM-clause entry for table "post" at character 26
+2022-03-14 16:02:32.152 EDT [22207] STATEMENT:  SELECT "authors"."name", "post"."id" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id"
+2022-03-14 16:04:15.946 EDT [22207] ERROR:  missing FROM-clause entry for table "author" at character 8
+2022-03-14 16:04:15.946 EDT [22207] STATEMENT:  SELECT "author"."name" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id"
+2022-03-14 16:04:40.681 EDT [22207] ERROR:  syntax error at or near "NULL" at character 115
+2022-03-14 16:04:40.681 EDT [22207] STATEMENT:  SELECT "posts"."id" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" WHERE (post.id NULL )
+2022-03-14 16:05:21.155 EDT [22207] ERROR:  missing FROM-clause entry for table "author" at character 8
+2022-03-14 16:05:21.155 EDT [22207] STATEMENT:  SELECT author.*, posts.* FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id"
+2022-03-14 16:05:35.114 EDT [22207] ERROR:  missing FROM-clause entry for table "author" at character 8
+2022-03-14 16:05:35.114 EDT [22207] STATEMENT:  SELECT author.*, COUNT(posts.*) FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id"
+2022-03-14 16:06:00.490 EDT [22207] ERROR:  missing FROM-clause entry for table "author" at character 8
+2022-03-14 16:06:00.490 EDT [22207] STATEMENT:  SELECT author.*, COUNT(posts.*) FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "author"."id"
+2022-03-14 16:07:56.306 EDT [22207] ERROR:  column "authors.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-03-14 16:07:56.306 EDT [22207] STATEMENT:  SELECT authors.*, COUNT(posts.*) FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id"
+2022-03-14 16:08:18.551 EDT [22207] ERROR:  function count(authors, bigint) does not exist at character 8
+2022-03-14 16:08:18.551 EDT [22207] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2022-03-14 16:08:18.551 EDT [22207] STATEMENT:  SELECT COUNT(authors.*, COUNT(posts.*)) AS "count_authors_all_count_posts_all", "authors"."id" AS "authors_id" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "authors"."id"
+2022-03-14 16:09:32.817 EDT [22207] ERROR:  syntax error at or near "as" at character 40
+2022-03-14 16:09:32.817 EDT [22207] STATEMENT:  SELECT COUNT(authors.*, COUNT(posts.*) as post_counts) AS "count_authors_all_count_posts_all_as_post_counts", "authors"."id" AS "authors_id" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "authors"."id"
+2022-03-14 16:09:58.403 EDT [22207] ERROR:  column "authors.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-03-14 16:09:58.403 EDT [22207] STATEMENT:  SELECT authors.*, COUNT(posts.*) as post_counts FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "authors"."name"
+2022-03-14 16:10:09.499 EDT [22207] ERROR:  column "authors.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-03-14 16:10:09.499 EDT [22207] STATEMENT:  SELECT authors.*, COUNT(posts.*) as post_counts FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "authors"."name"
+2022-03-14 16:10:32.266 EDT [22207] ERROR:  column "authors.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-03-14 16:10:32.266 EDT [22207] STATEMENT:  SELECT authors.*, COUNT(posts.*) as post_counts FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id"
+2022-03-14 16:10:42.885 EDT [22207] ERROR:  column "authors.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-03-14 16:10:42.885 EDT [22207] STATEMENT:  SELECT authors.*, COUNT(posts.*) as post_counts FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" GROUP BY "authors"."name"
+2022-03-14 16:22:37.808 EDT [22207] ERROR:  missing FROM-clause entry for table "post" at character 106
+2022-03-14 16:22:37.808 EDT [22207] STATEMENT:  SELECT "authors".* FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" WHERE (post.id >0) GROUP BY "authors"."name"
+2022-03-14 16:22:44.535 EDT [22207] ERROR:  missing FROM-clause entry for table "post" at character 170
+2022-03-14 16:22:44.535 EDT [22207] STATEMENT:  SELECT COUNT("posts"."id") AS "count_posts_id", "authors"."name" AS "authors_name" FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" WHERE (post.id >0) GROUP BY "authors"."name"
+2022-03-14 16:22:55.640 EDT [22207] ERROR:  missing FROM-clause entry for table "post" at character 106
+2022-03-14 16:22:55.640 EDT [22207] STATEMENT:  SELECT "authors".* FROM "authors" LEFT OUTER JOIN "posts" ON "posts"."author_id" = "authors"."id" WHERE (post.id >0) GROUP BY "authors"."name"
+2022-03-14 18:35:36.467 EDT [27820] ERROR:  relation "users" does not exist at character 23
+2022-03-14 18:35:36.467 EDT [27820] STATEMENT:  SELECT "users".* FROM "users"
+2022-03-14 18:43:26.759 EDT [28464] ERROR:  relation "users" does not exist at character 23
+2022-03-14 18:43:26.759 EDT [28464] STATEMENT:  SELECT "users".* FROM "users"
+2022-03-14 18:44:23.433 EDT [28564] ERROR:  relation "users" does not exist at character 23
+2022-03-14 18:44:23.433 EDT [28564] STATEMENT:  SELECT "users".* FROM "users"
+2022-03-18 16:34:19.255 EDT [16126] LOG:  received fast shutdown request
+2022-03-18 16:34:19.256 EDT [16126] LOG:  aborting any active transactions
+2022-03-18 16:34:19.259 EDT [16126] LOG:  background worker "logical replication launcher" (PID 16133) exited with exit code 1
+2022-03-18 16:34:19.260 EDT [16128] LOG:  shutting down
+2022-03-18 16:34:19.275 EDT [16126] LOG:  database system is shut down

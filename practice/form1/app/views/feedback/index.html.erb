@@ -1,0 +1,30 @@
+<h1>Feedback#index</h1>
+
+<div class="container">
+
+<%= form_with url: 'feedback', method: 'POST' do |form| %>
+    <div class="form-group">
+        <%= form.label :first_name, "first name" %>
+        <%= form.text_field :first_name, class: "form-control", placeholder: "first name" %>
+    </div>
+    
+    <div class="form-group">
+        <%= form.label :last_name, "last name" %>
+        <%= form.text_field :last_name, class: "form-control", placeholder: "last name" %>
+    </div>
+    
+    <div class="form-group">
+        <%= form.label :email, "email" %>
+        <%= form.text_field :email, class: "form-control", placeholder: "name@apple.com" %>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :feedback, "feedback" %>
+        <%= form.text_area :feedback, size: "70x10" ,class: "form-control", placeholder: "your feedback" %>
+    </div>
+    
+    <%= form.submit "submit", class: "btn btn-primary mt-2" %>
+
+<% end %>
+
+</div>

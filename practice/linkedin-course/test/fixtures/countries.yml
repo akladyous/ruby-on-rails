@@ -1,0 +1,16 @@
+# == Schema Information
+#
+# Table name: countries
+#
+#  id         :integer          not null, primary key
+#  active     :boolean          default(TRUE)
+#  country    :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+one:
+  country: MyString
+
+two:
+  country: MyString

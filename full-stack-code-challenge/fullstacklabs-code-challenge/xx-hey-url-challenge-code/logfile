@@ -1,0 +1,186 @@
+2022-04-28 14:01:29.938 EDT [32071] LOG:  starting PostgreSQL 14.2 on x86_64-apple-darwin21.3.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.30), 64-bit
+2022-04-28 14:01:29.940 EDT [32071] LOG:  listening on IPv6 address "::1", port 5432
+2022-04-28 14:01:29.940 EDT [32071] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-04-28 14:01:29.940 EDT [32071] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-04-28 14:01:29.962 EDT [32072] LOG:  database system was interrupted; last known up at 2022-04-28 13:26:13 EDT
+2022-04-28 14:01:30.193 EDT [32072] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-04-28 14:01:30.198 EDT [32072] LOG:  redo starts at 0/60E3438
+2022-04-28 14:01:30.198 EDT [32072] LOG:  invalid record length at 0/60E3520: wanted 24, got 0
+2022-04-28 14:01:30.198 EDT [32072] LOG:  redo done at 0/60E34E8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2022-04-28 14:01:30.213 EDT [32071] LOG:  database system is ready to accept connections
+2022-04-28 14:01:37.095 EDT [32120] ERROR:  database "hey_url_db" already exists
+2022-04-28 14:01:37.095 EDT [32120] STATEMENT:  CREATE DATABASE "hey_url_db" ENCODING = 'unicode'
+2022-04-28 14:01:43.339 EDT [32152] FATAL:  database "hey-url_development" does not exist
+2022-04-28 14:02:53.894 EDT [32203] FATAL:  database "hey-url_development" does not exist
+2022-04-28 21:24:25.866 EDT [46383] ERROR:  column urls.shor_url does not exist at character 35
+2022-04-28 21:24:25.866 EDT [46383] HINT:  Perhaps you meant to reference the column "urls.short_url".
+2022-04-28 21:24:25.866 EDT [46383] STATEMENT:  SELECT "urls".* FROM "urls" WHERE "urls"."shor_url" = $1 LIMIT $2
+2022-04-28 21:24:38.223 EDT [46383] ERROR:  column urls.shor_url does not exist at character 35
+2022-04-28 21:24:38.223 EDT [46383] HINT:  Perhaps you meant to reference the column "urls.short_url".
+2022-04-28 21:24:38.223 EDT [46383] STATEMENT:  SELECT "urls".* FROM "urls" WHERE "urls"."shor_url" = $1 LIMIT $2
+2022-04-28 21:29:22.708 EDT [51846] ERROR:  column urls.shor_url does not exist at character 35
+2022-04-28 21:29:22.708 EDT [51846] HINT:  Perhaps you meant to reference the column "urls.short_url".
+2022-04-28 21:29:22.708 EDT [51846] STATEMENT:  SELECT "urls".* FROM "urls" WHERE "urls"."shor_url" = $1 LIMIT $2
+2022-04-28 23:45:53.457 EDT [53422] ERROR:  missing FROM-clause entry for table "clocks" at character 98
+2022-04-28 23:45:53.457 EDT [53422] STATEMENT:  SELECT "urls".* FROM "urls" LEFT OUTER JOIN "clicks" ON "clicks"."url_id" = "urls"."id" GROUP BY clocks.platform LIMIT $1
+2022-04-28 23:46:24.985 EDT [53422] ERROR:  missing FROM-clause entry for table "clocks" at character 40
+2022-04-28 23:46:24.985 EDT [53422] STATEMENT:  SELECT COUNT("urls"."id") AS count_id, clocks.platform AS clocks_platform FROM "urls" LEFT OUTER JOIN "clicks" ON "clicks"."url_id" = "urls"."id" GROUP BY clocks.platform
+2022-04-28 23:48:19.456 EDT [59633] ERROR:  database "hey-url_development" is being accessed by other users
+2022-04-28 23:48:19.456 EDT [59633] DETAIL:  There is 1 other session using the database.
+2022-04-28 23:48:19.456 EDT [59633] STATEMENT:  DROP DATABASE IF EXISTS "hey-url_development"
+2022-04-29 00:02:10.558 EDT [59846] ERROR:  column urls.platform does not exist at character 97
+2022-04-29 00:02:10.558 EDT [59846] STATEMENT:  SELECT clicks.platform FROM "urls" INNER JOIN "clicks" ON "clicks"."url_id" = "urls"."id" WHERE "urls"."platform" = $1 LIMIT $2
+2022-04-29 00:03:01.261 EDT [59846] ERROR:  missing FROM-clause entry for table "clicks" at character 8
+2022-04-29 00:03:01.261 EDT [59846] STATEMENT:  SELECT clicks.platform FROM "urls" LIMIT $1
+2022-04-29 00:03:22.707 EDT [59846] ERROR:  missing FROM-clause entry for table "clicks" at character 8
+2022-04-29 00:03:22.707 EDT [59846] STATEMENT:  SELECT clicks.platform FROM "urls" LIMIT $1
+2022-04-29 00:04:46.394 EDT [59846] ERROR:  missing FROM-clause entry for table "clicks" at character 8
+2022-04-29 00:04:46.394 EDT [59846] STATEMENT:  SELECT clicks.platform FROM "urls" LIMIT $1
+2022-04-29 00:05:02.385 EDT [59846] ERROR:  missing FROM-clause entry for table "clicks" at character 8
+2022-04-29 00:05:02.385 EDT [59846] STATEMENT:  SELECT clicks.browser FROM "urls" LIMIT $1
+2022-04-29 00:05:14.354 EDT [59846] ERROR:  missing FROM-clause entry for table "click" at character 8
+2022-04-29 00:05:14.354 EDT [59846] STATEMENT:  SELECT click.browser FROM "urls" LIMIT $1
+2022-04-29 00:05:30.065 EDT [59846] ERROR:  missing FROM-clause entry for table "clicks" at character 8
+2022-04-29 00:05:30.065 EDT [59846] STATEMENT:  SELECT clicks.platform FROM "urls" LIMIT $1
+2022-04-29 00:05:43.786 EDT [59846] ERROR:  missing FROM-clause entry for table "clicks" at character 8
+2022-04-29 00:05:43.786 EDT [59846] STATEMENT:  SELECT clicks.platform FROM "urls" GROUP BY "platform" LIMIT $1
+2022-04-29 00:05:49.873 EDT [59846] ERROR:  missing FROM-clause entry for table "clicks" at character 8
+2022-04-29 00:05:49.873 EDT [59846] STATEMENT:  SELECT clicks.platform FROM "urls" GROUP BY clicks.platform LIMIT $1
+2022-04-29 00:07:14.872 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 00:07:14.872 EDT [59846] STATEMENT:  SELECT "urls"."id" FROM "urls" INNER JOIN "clicks" ON "clicks"."url_id" = "urls"."id" GROUP BY clicks.platform LIMIT $1
+2022-04-29 00:07:57.326 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 00:07:57.326 EDT [59846] STATEMENT:  SELECT "urls"."id" FROM "urls" INNER JOIN "clicks" ON "clicks"."url_id" = "urls"."id" GROUP BY clicks.platform LIMIT $1
+2022-04-29 00:08:34.877 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 00:08:34.877 EDT [59846] STATEMENT:  SELECT "urls"."id" FROM "urls" INNER JOIN "clicks" ON "clicks"."url_id" = "urls"."id" GROUP BY clicks.platform LIMIT $1
+2022-04-29 00:10:32.052 EDT [59846] ERROR:  missing FROM-clause entry for table "url" at character 8
+2022-04-29 00:10:32.052 EDT [59846] STATEMENT:  SELECT url.id, url.clicks_count, click.platform FROM "urls" INNER JOIN "clicks" ON "clicks"."url_id" = "urls"."id" LIMIT $1
+2022-04-29 00:11:30.827 EDT [59846] ERROR:  column clicks.clicks_count does not exist at character 14
+2022-04-29 00:11:30.827 EDT [59846] STATEMENT:  SELECT COUNT(clicks.clicks_count) AS count_clicks_clicks_count, clicks.platform AS clicks_platform FROM "urls" INNER JOIN "clicks" ON "clicks"."url_id" = "urls"."id" GROUP BY clicks.platform
+2022-04-29 00:12:50.748 EDT [59846] ERROR:  missing FROM-clause entry for table "click" at character 8
+2022-04-29 00:12:50.748 EDT [59846] STATEMENT:  SELECT click.platform, url.clicks_count FROM "clicks" LEFT OUTER JOIN "urls" ON "urls"."id" = "clicks"."url_id" LIMIT $1
+2022-04-29 00:12:58.963 EDT [59846] ERROR:  missing FROM-clause entry for table "click" at character 8
+2022-04-29 00:12:58.963 EDT [59846] STATEMENT:  SELECT click.platform, url.clicks_count FROM "clicks" LEFT OUTER JOIN "urls" ON "urls"."id" = "clicks"."url_id" GROUP BY "clicks"."platform" LIMIT $1
+2022-04-29 00:15:22.978 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 00:15:22.978 EDT [59846] STATEMENT:  SELECT "urls".* FROM "urls" INNER JOIN "clicks" ON "clicks"."url_id" = "urls"."id" GROUP BY clicks.platform LIMIT $1
+2022-04-29 00:26:45.142 EDT [59846] ERROR:  missing FROM-clause entry for table "click" at character 40
+2022-04-29 00:26:45.142 EDT [59846] STATEMENT:  SELECT COUNT("urls"."id") AS count_id, click.platform AS click_platform FROM "urls" INNER JOIN "clicks" ON "clicks"."url_id" = "urls"."id" GROUP BY click.platform
+2022-04-29 01:05:09.605 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 01:05:09.605 EDT [59846] STATEMENT:  SELECT "urls"."id", "urls"."clicks_count", "urls"."created_at" FROM "urls" GROUP BY "urls"."created_at" ORDER BY "urls"."created_at" ASC LIMIT $1
+2022-04-29 01:05:18.666 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 01:05:18.666 EDT [59846] STATEMENT:  SELECT "urls".* FROM "urls" GROUP BY "urls"."created_at" LIMIT $1
+2022-04-29 01:05:35.747 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 01:05:35.747 EDT [59846] STATEMENT:  SELECT "urls".* FROM "urls" GROUP BY "urls"."created_at" LIMIT $1
+2022-04-29 01:06:06.013 EDT [59846] ERROR:  function count(bigint, integer, timestamp without time zone) does not exist at character 8
+2022-04-29 01:06:06.013 EDT [59846] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2022-04-29 01:06:06.013 EDT [59846] STATEMENT:  SELECT COUNT(id, clicks_count, created_at) AS count_id_clicks_count_created_at, "urls"."created_at" AS urls_created_at FROM "urls" GROUP BY "urls"."created_at" ORDER BY "urls"."created_at" ASC LIMIT $1
+2022-04-29 01:06:17.369 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 01:06:17.369 EDT [59846] STATEMENT:  SELECT "urls".* FROM "urls" GROUP BY "urls"."created_at" LIMIT $1
+2022-04-29 01:07:08.155 EDT [59846] ERROR:  function count(bigint, timestamp without time zone, integer) does not exist at character 8
+2022-04-29 01:07:08.155 EDT [59846] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2022-04-29 01:07:08.155 EDT [59846] STATEMENT:  SELECT COUNT(id, created_at, clicks_count) FROM "urls"
+2022-04-29 01:14:08.752 EDT [59846] ERROR:  missing FROM-clause entry for table "url" at character 43
+2022-04-29 01:14:08.752 EDT [59846] STATEMENT:  SELECT "urls".* FROM "urls" GROUP BY date(url.created_at) LIMIT $1
+2022-04-29 01:14:32.064 EDT [59846] ERROR:  missing FROM-clause entry for table "url" at character 43
+2022-04-29 01:14:32.064 EDT [59846] STATEMENT:  SELECT "urls".* FROM "urls" GROUP BY date(url.created_at) LIMIT $1
+2022-04-29 01:15:05.848 EDT [59846] ERROR:  missing FROM-clause entry for table "url" at character 38
+2022-04-29 01:15:05.848 EDT [59846] STATEMENT:  SELECT "urls".* FROM "urls" GROUP BY url.created_at::date LIMIT $1
+2022-04-29 01:16:20.824 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 01:16:20.824 EDT [59846] STATEMENT:  SELECT "urls"."id", "urls"."created_at" FROM "urls" GROUP BY DATE(created_at) LIMIT $1
+2022-04-29 01:16:47.962 EDT [59846] ERROR:  syntax error at or near "." at character 56
+2022-04-29 01:16:47.962 EDT [59846] STATEMENT:  SELECT COUNT("urls"."id") AS count_id, DATE(created_at).day AS date_created_at_day FROM "urls" GROUP BY DATE(created_at).day
+2022-04-29 01:24:36.284 EDT [59846] ERROR:  syntax error at or near "." at character 56
+2022-04-29 01:24:36.284 EDT [59846] STATEMENT:  SELECT COUNT("urls"."id") AS count_id, DATE(created_at).day AS date_created_at_day FROM "urls" GROUP BY DATE(created_at).day
+2022-04-29 01:24:43.014 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 01:24:43.014 EDT [59846] STATEMENT:  SELECT "urls"."id", "urls"."created_at" FROM "urls" GROUP BY DATE(created_at) LIMIT $1
+2022-04-29 01:25:40.610 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 01:25:40.610 EDT [59846] STATEMENT:  SELECT "urls"."id", "urls"."created_at", "urls"."clicks_count" FROM "urls" GROUP BY "urls"."created_at" LIMIT $1
+2022-04-29 01:25:49.235 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 01:25:49.235 EDT [59846] STATEMENT:  SELECT "urls"."id", "urls"."created_at", "urls"."clicks_count" FROM "urls" GROUP BY "urls"."created_at" LIMIT $1
+2022-04-29 01:26:18.837 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 01:26:18.837 EDT [59846] STATEMENT:  SELECT "urls"."id", "urls"."created_at", "urls"."clicks_count" FROM "urls" GROUP BY "urls"."created_at" LIMIT $1
+2022-04-29 01:26:23.870 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 01:26:23.870 EDT [59846] STATEMENT:  SELECT "urls"."id", "urls"."created_at", "urls"."clicks_count" FROM "urls" GROUP BY "urls"."created_at" LIMIT $1
+2022-04-29 01:26:30.397 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 01:26:30.397 EDT [59846] STATEMENT:  SELECT "urls"."id", "urls"."created_at", "urls"."clicks_count" FROM "urls" GROUP BY "urls"."created_at" LIMIT $1
+2022-04-29 01:26:34.576 EDT [59846] ERROR:  function count(bigint, timestamp without time zone, integer) does not exist at character 8
+2022-04-29 01:26:34.576 EDT [59846] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2022-04-29 01:26:34.576 EDT [59846] STATEMENT:  SELECT COUNT(id, created_at, clicks_count) AS count_id_created_at_clicks_count, "urls"."created_at" AS urls_created_at FROM "urls" GROUP BY "urls"."created_at"
+2022-04-29 01:28:14.250 EDT [59846] ERROR:  syntax error at or near "." at character 56
+2022-04-29 01:28:14.250 EDT [59846] STATEMENT:  SELECT COUNT("urls"."id") AS count_id, DATE(created_at).strftime('%b-%d') AS date_created_at_strftime_b_d FROM "urls" GROUP BY DATE(created_at).strftime('%b-%d')
+2022-04-29 01:29:07.522 EDT [59846] ERROR:  syntax error at or near "." at character 56
+2022-04-29 01:29:07.522 EDT [59846] STATEMENT:  SELECT COUNT("urls"."id") AS count_id, DATE(created_at).strftime("%b-%d") AS date_created_at_strftime_b_d FROM "urls" GROUP BY DATE(created_at).strftime("%b-%d")
+2022-04-29 01:29:15.634 EDT [59846] ERROR:  syntax error at or near "(" at character 61
+2022-04-29 01:29:15.634 EDT [59846] STATEMENT:  SELECT COUNT("urls"."id") AS count_id, (created_at).strftime("%b-%d") AS created_at_strftime_b_d FROM "urls" GROUP BY (created_at).strftime("%b-%d")
+2022-04-29 01:29:34.650 EDT [59846] ERROR:  syntax error at or near "(" at character 61
+2022-04-29 01:29:34.650 EDT [59846] STATEMENT:  SELECT COUNT("urls"."id") AS count_id, (created_at).strftime('%b-%d') AS created_at_strftime_b_d FROM "urls" GROUP BY (created_at).strftime('%b-%d')
+2022-04-29 01:31:44.056 EDT [59846] ERROR:  syntax error at end of input at character 115
+2022-04-29 01:31:44.056 EDT [59846] STATEMENT:  SELECT COUNT("urls"."id") AS count_id, created_at::date. AS created_at_date FROM "urls" GROUP BY created_at::date.
+2022-04-29 01:31:46.512 EDT [59846] ERROR:  syntax error at end of input at character 115
+2022-04-29 01:31:46.512 EDT [59846] STATEMENT:  SELECT COUNT("urls"."id") AS count_id, created_at::date. AS created_at_date FROM "urls" GROUP BY created_at::date.
+2022-04-29 01:31:56.177 EDT [59846] ERROR:  schema "date" does not exist at character 52
+2022-04-29 01:31:56.177 EDT [59846] STATEMENT:  SELECT COUNT("urls"."id") AS count_id, created_at::date.day AS created_at_date_day FROM "urls" GROUP BY created_at::date.day
+2022-04-29 01:35:29.144 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 01:35:29.144 EDT [59846] STATEMENT:  SELECT "urls".* FROM "urls" GROUP BY EXTRACT(DAY from created_at) LIMIT $1
+2022-04-29 01:36:25.085 EDT [59846] ERROR:  column "click_count" does not exist at character 31
+2022-04-29 01:36:25.085 EDT [59846] HINT:  Perhaps you meant to reference the column "urls.clicks_count".
+2022-04-29 01:36:25.085 EDT [59846] STATEMENT:  SELECT COUNT(*) AS count_all, "click_count" AS click_count FROM "urls" GROUP BY "click_count"
+2022-04-29 01:38:21.581 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 01:38:21.581 EDT [59846] STATEMENT:  SELECT "urls".* FROM "urls" GROUP BY created_at::date ORDER BY "urls"."created_at" ASC LIMIT $1
+2022-04-29 01:38:58.764 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 01:38:58.764 EDT [59846] STATEMENT:  SELECT "urls".* FROM "urls" GROUP BY created_at::date ORDER BY "urls"."created_at" ASC LIMIT $1
+2022-04-29 01:39:00.725 EDT [59846] ERROR:  column "urls.created_at" must appear in the GROUP BY clause or be used in an aggregate function at character 114
+2022-04-29 01:39:00.725 EDT [59846] STATEMENT:  SELECT COUNT(*) AS count_all, created_at::date AS created_at_date FROM "urls" GROUP BY created_at::date ORDER BY "urls"."created_at" ASC
+2022-04-29 01:40:08.285 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 01:40:08.285 EDT [59846] STATEMENT:  SELECT "urls".* FROM "urls" GROUP BY created_at::date ORDER BY "urls"."created_at" ASC LIMIT $1
+2022-04-29 01:40:19.908 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 01:40:19.908 EDT [59846] STATEMENT:  SELECT "urls".* FROM "urls" GROUP BY "urls"."created_at" ORDER BY "urls"."created_at" ASC LIMIT $1
+2022-04-29 01:40:31.307 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 01:40:31.307 EDT [59846] STATEMENT:  SELECT "urls".* FROM "urls" GROUP BY "urls"."created_at" LIMIT $1
+2022-04-29 01:44:27.006 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 01:44:27.006 EDT [59846] STATEMENT:  SELECT "urls".* FROM "urls" GROUP BY "urls"."created_at" LIMIT $1
+2022-04-29 01:59:56.715 EDT [59846] ERROR:  syntax error at or near "(" at character 61
+2022-04-29 01:59:56.715 EDT [59846] STATEMENT:  SELECT COUNT("urls"."id") AS count_id, (created_at).strftime("%b-%d") AS created_at_strftime_b_d FROM "urls" GROUP BY (created_at).strftime("%b-%d")
+2022-04-29 02:00:52.111 EDT [59846] ERROR:  syntax error at or near "(" at character 59
+2022-04-29 02:00:52.111 EDT [59846] STATEMENT:  SELECT "urls".* FROM "urls" GROUP BY (created_at).strftime('%d') LIMIT $1
+2022-04-29 02:00:57.471 EDT [59846] ERROR:  syntax error at or near "(" at character 61
+2022-04-29 02:00:57.471 EDT [59846] STATEMENT:  SELECT COUNT("urls"."id") AS count_id, (created_at).strftime("%b-%d") AS created_at_strftime_b_d FROM "urls" GROUP BY (created_at).strftime("%b-%d")
+2022-04-29 02:02:30.316 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 02:02:30.316 EDT [59846] STATEMENT:  SELECT "urls".* FROM "urls" GROUP BY "urls"."created_at" LIMIT $1
+2022-04-29 02:03:44.371 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 02:03:44.371 EDT [59846] STATEMENT:  SELECT "urls".* FROM "urls" GROUP BY date_trunc('day', created_at) LIMIT $1
+2022-04-29 02:05:24.495 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 02:05:24.495 EDT [59846] STATEMENT:  SELECT "urls".* FROM "urls" GROUP BY (EXTRACT(MONTH FROM created_at))::integer LIMIT $1
+2022-04-29 02:06:44.050 EDT [59846] ERROR:  function month(timestamp without time zone) does not exist at character 31
+2022-04-29 02:06:44.050 EDT [59846] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2022-04-29 02:06:44.050 EDT [59846] STATEMENT:  SELECT COUNT(*) AS count_all, MONTH(created_at) AS month_created_at FROM "urls" GROUP BY MONTH(created_at)
+2022-04-29 02:06:53.832 EDT [59846] ERROR:  function month(timestamp without time zone) does not exist at character 31
+2022-04-29 02:06:53.832 EDT [59846] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2022-04-29 02:06:53.832 EDT [59846] STATEMENT:  SELECT COUNT(*) AS count_all, MONTH(created_at) AS month_created_at FROM "urls" GROUP BY MONTH(created_at)
+2022-04-29 02:07:07.912 EDT [59846] ERROR:  function day(timestamp without time zone) does not exist at character 31
+2022-04-29 02:07:07.912 EDT [59846] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2022-04-29 02:07:07.912 EDT [59846] STATEMENT:  SELECT COUNT(*) AS count_all, DAY(created_at) AS day_created_at FROM "urls" GROUP BY DAY(created_at)
+2022-04-29 02:08:44.903 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 02:08:44.903 EDT [59846] STATEMENT:  SELECT "urls".* FROM "urls" GROUP BY date_trunc('month', created_at) LIMIT $1
+2022-04-29 02:24:19.209 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 135
+2022-04-29 02:24:19.209 EDT [59846] STATEMENT:  SELECT COUNT("urls"."id") AS count_id, "urls"."clicks_count" AS urls_clicks_count FROM "urls" GROUP BY "urls"."clicks_count" ORDER BY "urls"."id" ASC
+2022-04-29 02:24:52.744 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 135
+2022-04-29 02:24:52.744 EDT [59846] STATEMENT:  SELECT COUNT("urls"."id") AS count_id, "urls"."clicks_count" AS urls_clicks_count FROM "urls" GROUP BY "urls"."clicks_count" ORDER BY "urls"."id" ASC
+2022-04-29 02:25:22.898 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 135
+2022-04-29 02:25:22.898 EDT [59846] STATEMENT:  SELECT COUNT("urls"."id") AS count_id, "urls"."clicks_count" AS urls_clicks_count FROM "urls" GROUP BY "urls"."clicks_count" ORDER BY "urls"."id" ASC
+2022-04-29 02:25:37.544 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 02:25:37.544 EDT [59846] STATEMENT:  SELECT "urls"."id", "urls"."clicks_count" FROM "urls" GROUP BY "urls"."clicks_count" LIMIT $1
+2022-04-29 02:25:46.728 EDT [59846] ERROR:  function count(bigint, integer) does not exist at character 8
+2022-04-29 02:25:46.728 EDT [59846] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2022-04-29 02:25:46.728 EDT [59846] STATEMENT:  SELECT COUNT(id, clicks_count) AS count_id_clicks_count, "urls"."clicks_count" AS urls_clicks_count FROM "urls" GROUP BY "urls"."clicks_count"
+2022-04-29 02:36:17.527 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 02:36:17.527 EDT [59846] STATEMENT:  SELECT "urls"."id" FROM "urls" GROUP BY "urls"."created_at"
+2022-04-29 02:36:21.561 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 02:36:21.561 EDT [59846] STATEMENT:  SELECT "urls".* FROM "urls" GROUP BY "urls"."created_at" LIMIT $1
+2022-04-29 02:36:31.487 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 02:36:31.487 EDT [59846] STATEMENT:  SELECT "urls"."id" FROM "urls" GROUP BY "urls"."created_at"
+2022-04-29 02:41:42.766 EDT [59846] ERROR:  syntax error at or near "LIMIT" at character 68
+2022-04-29 02:41:42.766 EDT [59846] STATEMENT:  SELECT "urls".* FROM "urls" GROUP BY extract(day   from created_at LIMIT $1
+2022-04-29 02:44:58.796 EDT [59846] ERROR:  column "urls.created_at" must appear in the GROUP BY clause or be used in an aggregate function at character 139
+2022-04-29 02:44:58.796 EDT [59846] STATEMENT:  SELECT SUM("urls"."clicks_count") AS sum_clicks_count, created_at::date AS created_at_date FROM "urls" GROUP BY created_at::date ORDER BY "urls"."created_at" ASC
+2022-04-29 02:45:27.212 EDT [59846] ERROR:  column "urls.id" must appear in the GROUP BY clause or be used in an aggregate function at character 8
+2022-04-29 02:45:27.212 EDT [59846] STATEMENT:  SELECT "urls".* FROM "urls" GROUP BY "urls"."created_at" ORDER BY "urls"."created_at" ASC LIMIT $1

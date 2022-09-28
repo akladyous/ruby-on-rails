@@ -1,0 +1,2 @@
+class ListingFoundsController < ApplicationController
+end

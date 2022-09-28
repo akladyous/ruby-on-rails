@@ -1,0 +1,8 @@
+<div>
+	<% @stats.top.each do |word, count| %>
+		<div>
+			<span><%= word.upcase %></span>
+			<span><%= count %></span>
+		</div>
+	<% end %>
+</div>

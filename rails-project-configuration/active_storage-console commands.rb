@@ -1,0 +1,1 @@
+p1.image_file.attach(io: File.open("/Users/boula/Documents/dev/github/projects/lost-pet-101/client/src/images/dog1.jpeg"), filename: "dog1.jpeg")

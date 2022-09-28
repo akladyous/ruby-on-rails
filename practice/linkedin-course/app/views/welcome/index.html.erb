@@ -1,0 +1,10 @@
+<h1>Welcome#index</h1>
+<% @nums.each do |num| %>
+    <ul>
+        <li> number:
+        <%= num %>
+        </li>
+    </ul>
+<% end %>
+
+<%= link_to("prova page", {controller: 'prova', action: 'index'}) %>
