@@ -1,6 +1,7 @@
 <%= content_for :content do %>
 	<div class="container">
-		<h1>home page</h1>
+		<%= render 'title' %>
+		<%= render 'flash' %>
 		<%= yield %>
 	</div>
 <% end %>
