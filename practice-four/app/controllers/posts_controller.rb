@@ -18,6 +18,7 @@ class PostsController < ApplicationController
       if @post.save
         format.html { redirect_to post_path(@post), success: 'Post successfully created'}
       else
+        flash[:error] = "error creating post"
         format.html { render :new, status: :unprocessable_entity }
       end
     end
