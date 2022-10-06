@@ -10,4 +10,13 @@ module ApplicationHelper
     }
     classes[flash_type.to_sym] || classes[:notice]
   end
+
+  def object_errors_for(object, attribute)
+    return nil unless object.errors.any?
+    if object.errors.has_key? attribute
+      return content_tag :div, nil, { class: 'd-block '} do
+        content_tag :p, object.errors.full_messages_for(attribute).to_sentence, class: 'mb-0'
+      end
+    end
+  end
 end
