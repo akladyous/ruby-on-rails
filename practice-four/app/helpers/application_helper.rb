@@ -14,7 +14,7 @@ module ApplicationHelper
   def object_errors_for(object, attribute)
     return nil unless object.errors.any?
     if object.errors.has_key? attribute
-      return content_tag :div, nil, { class: 'd-block '} do
+      return content_tag :div, nil, { class: 'd-block px-1 text-danger'} do
         content_tag :p, object.errors.full_messages_for(attribute).to_sentence, class: 'mb-0'
       end
     end
