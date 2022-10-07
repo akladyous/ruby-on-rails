@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'contact/index'
+  get 'contact/create'
     root 'posts#index'
     devise_for :users
     resources :posts
