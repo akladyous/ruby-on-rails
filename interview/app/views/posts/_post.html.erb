@@ -1,0 +1,12 @@
+<div id="<%= dom_id post %>">
+	<div class="mb2">
+		<p>
+			<strong>Title</strong>
+			<%= post.title %>
+		</p>
+	</div>
+	<div>
+		<p><%= post.content %></p>
+	</div>
+	<%= render 'links', post: post %>
+</div>

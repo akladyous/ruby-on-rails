@@ -1,0 +1,7 @@
+<div class="container">
+	<% @posts.each do |post| %>
+		<%= render post %>
+	<% end %>
+	<%= link_to 'new', new_post_path, class: 'btn btn-primary' if controller.action_name == 'index' unless Post.any? %>
+</div>
+<%=console%>
