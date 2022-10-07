@@ -1,12 +1,11 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy ]
+  before_action :set_post, only: %i[show edit update destroy]
 
   def index
     @posts = Post.all.order(created_at: :desc)
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @post = Post.new
@@ -16,23 +15,22 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     respond_to do |format|
       if @post.save
-        format.html { redirect_to post_path(@post), success: 'Post successfully created'}
+        format.html { redirect_to post_path(@post), success: 'Post successfully created' }
       else
-        flash[:error] = "error creating post"
+        flash[:error] = 'error creating post'
         format.html { render :new, status: :unprocessable_entity }
       end
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to post_path(@post), notice: 'post successfully updated' }
       else
-        format.html { render :edit, status: :unprocessable_entity}
+        format.html { render :edit, status: :unprocessable_entity }
       end
     end
   end
@@ -53,6 +51,4 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :content)
   end
-
-
 end
