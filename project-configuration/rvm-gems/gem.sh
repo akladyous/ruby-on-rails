@@ -16,6 +16,8 @@ rvm reload
 rvm get stable
 
 rvm docs generate-ri
+
+sudo rvm cleanup all
 gem install gem-release
  # ---------------------------------------------------------------------------------------------
  $ rvm gemset create prova

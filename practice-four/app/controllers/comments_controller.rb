@@ -1,7 +1,8 @@
 class CommentsController < ApplicationController
-  def create
-  end
 
-  def destroy
+
+  private
+  def comment_params
+    params.require(:comment).permit(:content)
   end
 end
