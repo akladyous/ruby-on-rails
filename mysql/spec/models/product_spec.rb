@@ -8,7 +8,7 @@ RSpec.describe Product, type: :model do
     expect(Product.attribute_names).to contain_exactly(*attributes)
   end
   it "match default value for #price to be Zero" do
-    expect(Product.column_defaults["price"]).to eq 0.00
+    expect(Product.column_defaults["price"]).to eq(0.00)
   end
   it "match default value for #avaliable to be 'false'" do
     expect(Product.column_defaults["avaliable"]).to be_falsy
