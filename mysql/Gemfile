@@ -62,7 +62,9 @@ group :development do
   gem 'ruby-progressbar', '~> 1.8', '>= 1.8.1'
   gem 'web-console'
   gem 'rspec-rails', '~> 6.0'
-  gem 'solargraph', '~> 0.47.2'
+  # gem 'solargraph', '~> 0.47.2'
+  gem 'solargraph-rails', '~> 1.0', '>= 1.0.1'
+
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 

@@ -2,6 +2,7 @@ include:
     - "**/*.rb"
     - "lib/**/*.rb"
     - "app/**/*.rb"
+    - "spec/**/*.rb"
 exclude:
     - spec/**/*
     - test/**/*
@@ -17,6 +18,7 @@ require:
     - activerecord
     - activestorage
     - activesupport
+    - rspec-rails
 
 domains: []
 reporters:
