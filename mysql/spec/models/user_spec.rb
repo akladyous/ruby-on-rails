@@ -17,6 +17,7 @@ RSpec.describe User, type: :model do
     it "has_one address" do
       assc = User.reflect_on_association(:address)
       expect(assc.macro).to eq(:has_one)
+      {is_expected}.to hav
     end
   end
 end
