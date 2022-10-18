@@ -1,26 +1,43 @@
 require 'rails_helper'
 
 RSpec.describe Product, type: :model do
+  let(:column_names) { ["id", "name", "price", "weight", "avaliable", "quantity", "department", "created_at", "updated_at"] }
   # pending "add some examples to (or delete) #{__FILE__}"
 
-  it "match all required attributes" do
-    attributes = ["id", "name", "price", "weight", "avaliable", "quantity", "department", "created_at", "updated_at"]
-    expect(Product.attribute_names).to contain_exactly(*attributes)
-  end
-  it "match default value for #price to be Zero" do
-    expect(Product.column_defaults["price"]).to eq(0.00)
-  end
-  it "match default value for #avaliable to be 'false'" do
-    expect(Product.column_defaults["avaliable"]).to be_falsy
+  describe "Model Attributes" do
+    it "match all required attributes" do
+      expect(Product.attribute_names).to contain_exactly(*column_names)
+    end
   end
 
-  let(:products) do
-    [
-      Product.create(name: 'door', price: 220.50, weight: 30, avaliable: true, quantity: 20, department: 'Home')
-    ]
+  describe "Model defaults" do
+    it "match #price value to be Zero" do
+      expect(Product.column_defaults["price"]).to eq(0.00)
+    end
+    it "match #avaliable value to be 'false'" do
+      expect(Product.column_defaults["avaliable"]).to be_falsy
+    end
   end
-  it "uses match_array to match a scope" do
-    expect(Product.all).to match_array(products)
+
+  describe "Validate Presence Of" do
+    # subject.valid?
+    # model_attributes = column_names.reject{ |e| e.end_with?('_at') || e=='id' }
+    # [:name, :price, :weight, :avaliable, :quantity, :department].each do |attribute|
+    #   it { is_expected.to validate_presence_of(attribute)}
+
+    # end
+    it { is_expected.to validate_presence_of(:name) }
+  end
+
+  describe "Model Collection" do
+    let(:products) do
+      [
+        Product.create(name: 'door', price: 220.50, weight: 30, avaliable: true, quantity: 20, department: 'Home')
+      ]
+    end
+    it "matches new product collections and Model Persistance" do
+      expect(Product.all).to match_array(products)
+    end
   end
 
 end
