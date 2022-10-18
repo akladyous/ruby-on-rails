@@ -16,11 +16,13 @@
 #     extend ActiveRecord::QueryMethods
 #     extend ActiveRecord::FinderMethods
 #     extend ActiveRecord::Associations::ClassMethods
+#     extend ActiveRecord::Reflection::ClassMethods
 #     extend ActiveRecord::Inheritance::ClassMethods
 #     extend ActiveRecord::Relation
 #     extend ActiveRecord::Validations::ClassMethods
 #     extend ActiveRecord::Callbacks::ClassMethods
 #     include ActiveRecord::Persistence
+#     include ActiveRecord::Associations::CollectionProxy
 #   end
 #
 # @!override ActiveRecord::FinderMethods#find
