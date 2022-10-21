@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'debug'
 
 RSpec.describe UsersController, type: :controller do
   render_views
@@ -29,15 +30,26 @@ RSpec.describe UsersController, type: :controller do
 
   context "GET #show" do
     let(:user_one) { User.first }
-    it "render @show template" do
-      get :show, params: { id: user_one.to_param }
-      expect(response).to render_template(:show)
-    end
 
     it "return a success response" do
       get :show, params: { id: user_one.to_param }
       expect(response).to be_successful
     end
+
+    it "render @show template" do
+      get :show, params: { id: user_one.to_param }
+      expect(response).to render_template(:show)
+      # parsed_body = JSON.parse(response.body)
+      # expect(response.body).to include(user_one.first_name)
+    end
+
+    it "parse user attributes on #show template" do
+      get :show, params: { id: user_one.to_param }
+      expect(response.body).to include(user_one.first_name)
+      expect(response.body).to include(user_one.last_name)
+      expect(response.body).to include(user_one.email)
+    end
+
   end
   context "NEW #index" do
     it "render @new template" do
