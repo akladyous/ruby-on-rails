@@ -19,14 +19,13 @@ RSpec.describe Product, type: :model do
     end
   end
 
-  describe "Validate Presence Of" do
+  xdescribe "Validate Presence Of" do
     # subject.valid?
     # model_attributes = column_names.reject{ |e| e.end_with?('_at') || e=='id' }
     # [:name, :price, :weight, :avaliable, :quantity, :department].each do |attribute|
     #   it { is_expected.to validate_presence_of(attribute)}
 
     # end
-    it { is_expected.to validate_presence_of(:name) }
   end
 
   describe "Model Collection" do
