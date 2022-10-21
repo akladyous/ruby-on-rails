@@ -28,19 +28,27 @@ RSpec.describe UsersController, type: :controller do
   end
 
   context "GET #show" do
+    let(:user_one) { User.first }
+    it "render @show template" do
+      get :show, params: { id: user_one.to_param }
+      expect(response).to render_template(:show)
+    end
+
     it "return a success response" do
-      user = User.create!(first_name: "first", last_name: 'last', email: "sample@example.com")
-      get :show, params: { id: user.to_param }
+      get :show, params: { id: user_one.to_param }
       expect(response).to be_successful
     end
   end
   context "NEW #index" do
+    it "render @new template" do
+      get :new
+      expect(response).to render_template(:new)
+    end
+  end
+  context "PUT #edit" do
 
   end
-  context "EDIT #index" do
-
-  end
-  context "CREATE #index" do
+  context "POST #creaet" do
 
   end
   context "UPDATE #index" do
