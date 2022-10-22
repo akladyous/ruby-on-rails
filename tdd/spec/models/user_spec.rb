@@ -4,6 +4,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   before(:each) do
     @user_attributes = ["id", "first_name", "last_name", "email", "active", "created_at", "updated_at"]
+    @presence_validators = described_class.validators.select{ |v| v.instance_of?(ActiveRecord::Validations::PresenceValidator) }.map{ |v| v.attributes }
   end
   after(:all) do
     User.delete_all
