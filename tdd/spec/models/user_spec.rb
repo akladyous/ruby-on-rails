@@ -2,6 +2,12 @@ require 'debug'
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+  before(:all) do
+    @columns_info = User.columns_hash.values.reduce(Hash.new(false)) do |hash, col|
+      hash[col.name.to_sym] = { :default => col.default, :type => col.type }
+      hash
+    end
+  end
   before(:each) do
     @user_attributes = ["id", "first_name", "last_name", "email", "active", "created_at", "updated_at"]
     @presence_validators = described_class.validators.select{ |v| v.instance_of?(ActiveRecord::Validations::PresenceValidator) }.map{ |v| v.attributes }
@@ -74,6 +80,11 @@ RSpec.describe User, type: :model do
     end
   end
 
+  describe 'prova' do
+    it 'xx' do
+      puts @columns_info
+    end
+  end
   xdescribe "Model Assosiation" do
     it "has_many orders" do
       assc = User.reflect_on_association(:orders)
