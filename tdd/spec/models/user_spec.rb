@@ -7,11 +7,11 @@ RSpec.describe User, type: :model do
       hash[col.name.to_sym] = { :default => col.default, :type => col.type }
       hash
     end
-  end
-  before(:each) do
+
     @user_attributes = ["id", "first_name", "last_name", "email", "active", "created_at", "updated_at"]
     @presence_validators = described_class.validators.select{ |v| v.instance_of?(ActiveRecord::Validations::PresenceValidator) }.map{ |v| v.attributes }
   end
+
   after(:all) do
     User.delete_all
   end
@@ -27,8 +27,8 @@ RSpec.describe User, type: :model do
     end
 
     it "validate the presence of first_name" do
-      subject.first_name = 'john'
-      subject.validate
+      # subject.first_name = 'john'
+      # subject.validate
       expect(subject.errors).to_not include('first_name')
     end
     it "validate the presence of last_name" do
@@ -66,6 +66,7 @@ RSpec.describe User, type: :model do
   end
   context 'scope test' do
     let(:attributes) { {first_name: 'first', last_name: 'last'} }
+    let(:user) { build(:user)}
     before(:each) do
       User.new(attributes.merge(email: 'sample1@example.com')).save
       User.new(attributes.merge(email: 'sample2@example.com')).save
@@ -80,11 +81,6 @@ RSpec.describe User, type: :model do
     end
   end
 
-  describe 'prova' do
-    it 'xx' do
-      puts @columns_info
-    end
-  end
   xdescribe "Model Assosiation" do
     it "has_many orders" do
       assc = User.reflect_on_association(:orders)
