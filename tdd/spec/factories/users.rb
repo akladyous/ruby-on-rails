@@ -13,3 +13,6 @@ FactoryBot.define do
     active { [true, false].sample }
   end
 end
+FactoryBot.define do
+  sequence :email { |n| "user#{n}@example.com" }
+end
