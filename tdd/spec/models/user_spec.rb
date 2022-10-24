@@ -66,7 +66,8 @@ RSpec.describe User, type: :model do
   end
   context 'scope test' do
     let(:attributes) { {first_name: 'first', last_name: 'last'} }
-    let(:user) { build(:user)}
+    let!(:user) { build(:user) }
+    let!(:users) { build_list(:random_users, 4) }
     before(:each) do
       User.new(attributes.merge(email: 'sample1@example.com')).save
       User.new(attributes.merge(email: 'sample2@example.com')).save
@@ -74,6 +75,7 @@ RSpec.describe User, type: :model do
       User.new(attributes.merge(email: 'sample4,@example.com', active: false)).save
     end
     it "should return active users" do
+      debugger
       expect(described_class.active_users.size).to be(2)
     end
     it "shoud return inactive users" do
