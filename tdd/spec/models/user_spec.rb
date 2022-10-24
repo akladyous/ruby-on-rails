@@ -24,6 +24,7 @@ RSpec.describe User, type: :model do
     xit "have all required attributes" do
       expect(subject.attribute_names).to contain_exactly(*@user_attributes)
     end
+  end
 
   context "check model validation" do
     it "validate the presence of first_name" do
@@ -51,12 +52,18 @@ RSpec.describe User, type: :model do
       @user2 = build(:user)
       expect { @user2.save! }.to raise_error(ActiveRecord::RecordInvalid)
     end
+  end
+
+  context "check default & type options for 'active' attribute" do
     it "should have defualt value for 'active' to be True" do
       expect(described_class.columns_hash["active"].default).to eq("1")
     end
     it "sould be kind_of Boolean for 'active' attribute" do
       expect(described_class.columns_hash["active"].type).to eq(:boolean)
     end
+  end
+
+  context "create new user" do
     it "should save successfully" do
       attributes = {first_name: 'John', last_name: 'Doe', email: 'user1@gmail.com'}
       @user = described_class.new(attributes)
@@ -64,7 +71,6 @@ RSpec.describe User, type: :model do
     end
   end
 
-  end
   context 'scope test' do
     let(:attributes) { {first_name: 'first', last_name: 'last'} }
     let!(:users) do
