@@ -21,14 +21,14 @@ RSpec.describe User, type: :model do
           expect(subject.attributes).to include(column)
         end
     end
-
     xit "have all required attributes" do
       expect(subject.attribute_names).to contain_exactly(*@user_attributes)
     end
 
+  context "check model validation" do
     it "validate the presence of first_name" do
-      # subject.first_name = 'john'
-      # subject.validate
+      subject.first_name = 'john'
+      subject.validate
       expect(subject.errors).to_not include('first_name')
     end
     it "validate the presence of last_name" do
@@ -64,9 +64,10 @@ RSpec.describe User, type: :model do
       expect { @user.save }.to change(described_class, :count).by(1)
     end
   end
+
+  end
   context 'scope test' do
     let(:attributes) { {first_name: 'first', last_name: 'last'} }
-    let!(:user) { build(:user) }
     let!(:users) do
        build_list(:random_users, 4) do |user, idx|
         user.active = false if idx >= 2
