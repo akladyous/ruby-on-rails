@@ -47,9 +47,8 @@ RSpec.describe User, type: :model do
       expect(subject.errors).to_not include('email')
     end
     it 'validates email uniqueness' do
-      attributes = {first_name: 'John', last_name: 'Doe', email: 'user1@gmail.com'}
-      @user1 = described_class.create(attributes)
-      @user2 = described_class.new(attributes)
+      @user1 = create(:user)
+      @user2 = build(:user)
       expect { @user2.save! }.to raise_error(ActiveRecord::RecordInvalid)
     end
     it "should have defualt value for 'active' to be True" do
