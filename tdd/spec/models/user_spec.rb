@@ -18,10 +18,11 @@ RSpec.describe User, type: :model do
   context 'check model attributes' do
     ["id", "first_name", "last_name", "email", "active", "created_at", "updated_at"].each do |column|
         it "shoud include #{column.upcase} attribute" do
+        debugger
           expect(subject.attributes).to include(column)
         end
     end
-    xit "have all required attributes" do
+    it "have all required attributes" do
       expect(subject.attribute_names).to contain_exactly(*@user_attributes)
     end
   end
@@ -30,7 +31,7 @@ RSpec.describe User, type: :model do
     it "validate the presence of first_name" do
       subject.first_name = 'john'
       subject.validate
-      expect(subject.errors).to_not include('first_name')
+      expect(subject.errors).not_to include('first_name')
     end
     it "validate the presence of last_name" do
       subject.last_name = 'doe'

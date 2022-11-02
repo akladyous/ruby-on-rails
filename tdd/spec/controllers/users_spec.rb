@@ -12,6 +12,7 @@ RSpec.describe UsersController, type: :controller do
       User.create!(first_name: "first", last_name: 'last', email: "sample2@example.com")
       User.create!(first_name: "first", last_name: 'last', email: "sample3@example.com")
     end
+    before(:each) { get :index }
     let(:users) { User.all }
 
     it "return a success response" do
@@ -19,11 +20,9 @@ RSpec.describe UsersController, type: :controller do
       expect(response).to have_http_status(:success)
     end
     it "assigns all users to @users" do
-      get :index
       expect(assigns['users']).to eq(users)
     end
     it "render @index template" do
-      get :index
       expect(response).to render_template('index')
     end
   end
