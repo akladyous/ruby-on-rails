@@ -31,6 +31,7 @@ RSpec.describe UsersController, type: :controller do
     let(:user_one) { User.first }
 
     it "return a success response" do
+      debugger
       get :show, params: { id: user_one.to_param }
       expect(response).to be_successful
     end
