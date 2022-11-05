@@ -5,9 +5,8 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     respond_to do |format|
-      # debugger
       format.json { render json: @users }
-      format.html { redirect_to root_url }
+      format.html { redirect_to root_path }
     end
 
   end
