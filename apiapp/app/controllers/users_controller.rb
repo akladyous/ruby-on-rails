@@ -1,11 +1,15 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show update destroy ]
-
+  # respond_to :json
   # GET /users
   def index
     @users = User.all
+    respond_to do |format|
+      # debugger
+      format.json { render json: @users }
+      format.html { redirect_to root_url }
+    end
 
-    render json: @users
   end
 
   # GET /users/1
