@@ -1,6 +1,6 @@
 module RescueHandler
-
   extend ActiveSupport::Concern
+
   included do
     rescue_from ActiveRecord::RecordInvalid do |e|
 
