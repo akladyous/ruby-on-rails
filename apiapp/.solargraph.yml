@@ -1,22 +1,39 @@
----
 include:
-- "**/*.rb"
+    - "**/*.rb"
+    - "lib/**/*.rb"
+    - "app/**/*.rb"
+    - "spec/**/*.rb"
 exclude:
-- spec/**/*
-- test/**/*
-- vendor/**/*
-- ".bundle/**/*"
-require: []
+    - spec/**/*
+    - test/**/*
+    - vendor/**/*
+    - ".bundle/**/*"
+require:
+    - actioncable
+    - actionmailer
+    - actionpack
+    - actionview
+    - activejob
+    - activemodel
+    - activerecord
+    - activestorage
+    - activesupport
+    - rspec-rails
+    - graphiql-rails
+    - graphql
 domains: []
 reporters:
-- rubocop
-- require_not_found
+    - rubocop
+    - require_not_found
 formatter:
-  rubocop:
-    cops: safe
-    except: []
-    only: []
-    extra_args: []
+    rubocop:
+        cops: safe
+        except: []
+        only: []
+        extra_args: []
 require_paths: []
-plugins: []
-max_files: 5000
+plugins:
+    - solargraph-rails
+    - graphiql-rails
+    - graphql
+max_files: 100000
