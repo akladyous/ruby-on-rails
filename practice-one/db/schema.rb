@@ -10,14 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_07_163454) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_07_173408) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "infos", force: :cascade do |t|
+    t.string "info"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "people", force: :cascade do |t|
     t.string "first_name", null: false
     t.string "last_name", null: false
-    t.integer "age"
+    t.integer "age", default: 18, null: false
     t.decimal "weight", precision: 5, scale: 3
     t.text "bio"
     t.boolean "married", default: false
@@ -31,6 +37,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_07_163454) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "quantity", default: 0, null: false
   end
 
 end
