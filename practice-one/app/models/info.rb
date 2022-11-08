@@ -1,6 +1,6 @@
 class Info < ApplicationRecord
   has_and_belongs_to_many :peoples
-
+  belongs_to :user, optional: true
   before_create :generate_token
 
   validates :name, text: true
