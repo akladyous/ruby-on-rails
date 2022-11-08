@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   private
   def current_user
-    User.first
+    User.find_by(id: 1)
   end
 
 
