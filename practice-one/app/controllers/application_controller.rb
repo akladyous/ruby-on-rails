@@ -6,8 +6,5 @@ class ApplicationController < ActionController::Base
     User.find_by(id: 1)
   end
 
-
-
-
   helper_method :current_user
 end
