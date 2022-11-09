@@ -9,8 +9,8 @@ class Info < ApplicationRecord
 
     def generate_token
       loop do
-        break unless self.class.exists?(token: token)
         self.token = SecureRandom.hex
+        break unless self.class.exists?(token: token)
       end
     end
 end

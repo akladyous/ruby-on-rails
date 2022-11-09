@@ -5,6 +5,8 @@ class User < ApplicationRecord
   has_many :posts
   # has_many :liked_posts, through: :likes, sourcze: :postb1
 
+  # has_many :comments, as: :commentable
+
   has_many :blogs
   # has_many :authored_posts, foreign_key: :user_id, class_name: 'Blog'
   # has_many :edited_posts, foreign_key: :user_id, class_name: 'Blog'

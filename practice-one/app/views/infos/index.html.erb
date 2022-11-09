@@ -1,0 +1,9 @@
+<div>
+	<h1>infos</h1>
+	<% @infos.each do |info| %>
+		<%= render info %>
+	<% end %>
+</div>
+<div>
+	<%= link_to 'new info',  new_info_path %>
+</div>
