@@ -10,9 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_08_222606) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_09_053331) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "blogs", force: :cascade do |t|
+    t.string "title"
+    t.string "content"
+    t.datetime "published"
+    t.integer "view_count"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_blogs_on_user_id"
+  end
 
   create_table "employees", force: :cascade do |t|
     t.string "first_name"
@@ -89,6 +100,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_08_222606) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "blogs", "users"
   add_foreign_key "infos", "users"
   add_foreign_key "posts", "users"
 end

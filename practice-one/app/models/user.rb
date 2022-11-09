@@ -2,9 +2,13 @@ class User < ApplicationRecord
   # has_many :posts, -> { where.not(published_at: nil) }, class_name: 'Post'
   has_many :likes, dependent: :destroy
   has_many :infos, dependent: :destroy
-  has_many :blogs
   has_many :posts
-  has_many :liked_posts, through: :likes, source: :post
+  # has_many :liked_posts, through: :likes, sourcze: :postb1
+
+  has_many :blogs
+  # has_many :authored_posts, foreign_key: :user_id, class_name: 'Blog'
+  # has_many :edited_posts, foreign_key: :user_id, class_name: 'Blog'
+
 
 
   # has_many :posts, after_add: :capitalize_title
