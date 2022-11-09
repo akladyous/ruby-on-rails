@@ -2,6 +2,7 @@ class User < ApplicationRecord
   # has_many :posts, -> { where.not(published_at: nil) }, class_name: 'Post'
   has_many :likes, dependent: :destroy
   has_many :infos, dependent: :destroy
+  has_many :blogs
   has_many :posts
   has_many :liked_posts, through: :likes, source: :post
 
