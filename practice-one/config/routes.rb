@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'errors/show'
 
   resources :posts do
     resource :likes, only: [:show, :create, :destroy]
@@ -12,4 +13,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "posts#index"
+
+  # match '404', to: redirect('/'), via: :all
+  match '(errors)/:status', to: 'errors#show', constraints: {status: /\d{3}/}, via: :all
 end
+

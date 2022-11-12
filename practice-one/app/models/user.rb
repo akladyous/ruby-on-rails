@@ -18,6 +18,9 @@ class User < ApplicationRecord
     debugger
     # self.title.capitalize
   end
+
+  validates :email, presence: true
+
 end
 # SELECT "posts".* FROM "posts"
 # INNER JOIN "likes" ON "posts"."id" = "likes"."post_id"
