@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :current_user
-  # include ErrorHandler
+  include ErrorHandler
 
   private
   def current_user
