@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+    resources :photos, param: :photo_id
   resources :users
   # root 'home#index'
 
@@ -9,6 +10,7 @@ Rails.application.routes.draw do
   # :controller
   # :action
   # :param
+  # :path
   # :module
   # :as
   # :via
@@ -18,18 +20,20 @@ Rails.application.routes.draw do
   # :defaults
   # :format
 
-
-  match 'photos/:id' => 'home#show', via: :get
-  match 'photos/:id', to: 'home#show', via: :post
-  match 'photos/:id', controller: 'home', action: 'index', via: :delete
-
-  match 'one', to: "home#index", via: :get
-                                # via: [:get, :post]
-                                # via: :all
-
+  # match(path, options = nil) ⇒ Object
+  # :via
+  match "test",     to: "test#index", via: :get
+  # :as
+  match 'test/:id'  =>  'test#show', via: :get, as: "get_photos"
+  match 'test/:id', to: 'test#show', via: :post
+  # :controller, :action
+  match 'test/:id', controller: 'photos', action: 'index', via: :all
   match 'two/(:id)', controller: :home, action: :index, via: :all
-  # match("/test:(id)", to: "home#index", via: :get)
-  # match "home/:id", module: :Company
 
+  # :constraints
+    match 'test/:id', to: 'test#update', constraints: {format: 'json'}, via: :get
+    match 'test/:id', to: 'test#delete', constraints: {id: /[A-Z]\d{3}/}, via: :get
+  # :defaults
+    match 'test', to: 'test#index', defaults: {format: 'jpg'}, via: :get
 
 end
