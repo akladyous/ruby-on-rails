@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
-  root 'home#index'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # root 'home#index'
+  get("/", controller: :home, action: :index)
 
-  # Defines the root path route ("/")
-  # root "articles#index"
-
+  match("/test:id", to: "home#index", via: :get)
 end
