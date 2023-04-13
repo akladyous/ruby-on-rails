@@ -6,8 +6,6 @@ Rails.application.routes.draw do
     get 'users/index'
     get 'users/utente'
 
-
-
     # resources :users
 
 
