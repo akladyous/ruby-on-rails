@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-    resources :photos, param: :photo_id
-  resources :users
-  # root 'home#index'
-
+  root 'home#index'
   # get("/", controller: :home, action: :index)
 
+  get 'students/:id', to: 'students#show', as: 'grades'
+
+  # ActionDispatch::Routing::Mapper::Base
   # Options ----------------
   # :path
   # :controller
@@ -19,21 +19,50 @@ Rails.application.routes.draw do
   # :constraints
   # :defaults
   # :format
-
   # match(path, options = nil) ⇒ Object
-  # :via
   match "test",     to: "test#index", via: :get
-  # :as
   match 'test/:id'  =>  'test#show', via: :get, as: "get_photos"
   match 'test/:id', to: 'test#show', via: :post
-  # :controller, :action
   match 'test/:id', controller: 'photos', action: 'index', via: :all
   match 'two/(:id)', controller: :home, action: :index, via: :all
+  match 'test/:id', to: 'test#update', constraints: {format: 'json'}, via: :get
+  match 'test/:id', to: 'test#delete', constraints: {id: /[A-Z]\d{3}/}, via: :get
+  match 'test', to: 'test#index', defaults: {format: 'jpg'}, via: :get
 
-  # :constraints
-    match 'test/:id', to: 'test#update', constraints: {format: 'json'}, via: :get
-    match 'test/:id', to: 'test#delete', constraints: {id: /[A-Z]\d{3}/}, via: :get
-  # :defaults
-    match 'test', to: 'test#index', defaults: {format: 'jpg'}, via: :get
+  # RESOURCES < ----------------------------------------
+  # Options : Takes same options as 'match' as well as:
+  # :path_name
+  # :path
+  # :only
+  # :except
+  # :shallow
+  # :shallow_path
+  # :format
+  # :param
+  resources :users, shallow: true  do
+        resources :photos, param: :photo_id, path: 'images'
+  end
 
+  resources :squares do
+    member do
+      get 'member'
+      post 'member'
+    end
+    collection do
+      post 'search'
+      delete 'delete'
+    end
+  end
+
+  namespace "admin", module: 'prova' do
+    resources :books
+  end
+
+  scope  module: 'blog' do
+    resources :posts
+  end
 end
+
+
+
+
