@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'home#index'
+  draw(:singular_routes)
 
   # RESOURCES < ----------------------------------------
   # Options : Takes same options as 'match' as well as:
