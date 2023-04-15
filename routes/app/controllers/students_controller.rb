@@ -1,4 +1,9 @@
 class StudentsController < ApplicationController
+  def publish
+  end
+  def publish_all
+  end
+
   def index
   end
 
