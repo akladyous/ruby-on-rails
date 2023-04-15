@@ -36,7 +36,7 @@ Rails.application.routes.draw do
   # RESOURCES < ----------------------------------------
   # Options : Takes same options as 'match' as well as:
   # :path_name
-  # :path
+  # :path -> to be applied on 'resources'
   # :only
   # :except
   # :shallow
@@ -44,14 +44,18 @@ Rails.application.routes.draw do
   # :format
   # :param
 
-  resources :students, path: 'products' do
-    member do
-      patch :publish
+
+  # get "students/:id", to: "students#show", constraints: {id: /\d{1,2}/}
+  # constraints(id: /\d{1,3}/) do
+    resources :students, path: 'studenti' do #, path_names: {update: 'student_path'} do
+      # member do
+      #   patch :publish
+      # end
+      # collection do
+      #   delete :publish_all
+      # end
     end
-    collection do
-      delete :publish_all
-    end
-  end
+  # end
 
   resources :users, shallow: true  do
         resources :photos, param: :photo_id, path: 'images'

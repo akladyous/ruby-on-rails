@@ -9,6 +9,7 @@ class StudentsController < ApplicationController
 
   def show
     debugger
+    redirect_to root_path
   end
 
   def new
