@@ -34,7 +34,7 @@ Rails.application.routes.draw do
   match 'test/:id',   to: 'test#delete', constraints: {id: /[A-Z]\d{3}/}, via: :get
   match 'test',       to: 'test#index', defaults: {format: 'jpg'}, via: :get
   get   '/test/:name',to: redirect('/articles/%{name}', status: 302)
-  post  'test/:id', to: -> { || }
+  post  'test/:id', to: -> {  }
 
 
   # RESOURCES < ----------------------------------------

@@ -187,6 +187,9 @@ GEM
       sorbet-runtime (>= 0.5.9204)
       unparser
     rbs (2.8.4)
+    rbs_rails (0.11.0)
+      parser
+      rbs (>= 1)
     regexp_parser (2.7.0)
     reline (0.3.3)
       io-console (~> 0.5)
@@ -309,6 +312,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)
+  rbs_rails
   ruby-lsp
   selenium-webdriver
   solargraph
