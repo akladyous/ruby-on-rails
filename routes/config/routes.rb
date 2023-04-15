@@ -37,7 +37,6 @@ Rails.application.routes.draw do
   post  'test/:id', to: -> { || }
 
 
-
   # RESOURCES < ----------------------------------------
   # Options : Takes same options as 'match' as well as:
   # :path_name
