@@ -2,9 +2,11 @@ Rails.application.routes.draw do
   root 'home#index'
   # get("/", controller: :home, action: :index)
 
-  get 'students/:id', to: 'students#show', as: 'grades'
+  # get 'students/:id', to: 'students#show', as: 'grades'
+  get "students/:id", controller: :students, action: 'show'
 
-  # ActionDispatch::Routing::Mapper::Base
+
+      # ActionDispatch::Routing::Mapper::Base
   # Options ----------------
   # :path
   # :controller

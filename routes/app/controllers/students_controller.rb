@@ -3,6 +3,7 @@ class StudentsController < ApplicationController
   end
 
   def show
+    debugger
   end
 
   def new
