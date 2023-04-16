@@ -65,7 +65,11 @@ Rails.application.routes.draw do
         resources :photos, param: :photo_id, path: 'images'
   end
 
-  resources :squares do
+  resources :animals, shallow: true do
+    resources :dogs
+  end
+
+  resources :posts, path: "posting" do
     member do
       get 'member'
       post 'member'
