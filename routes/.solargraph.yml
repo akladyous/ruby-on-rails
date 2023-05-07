@@ -1,12 +1,24 @@
 ---
 include:
   - '**/*.rb'
+  - 'lib/**/*.rb'
+  - 'app/**/*.rb'
 exclude:
   - spec/**/*
   - test/**/*
   - vendor/**/*
   - '.bundle/**/*'
-require: []
+require:
+  - actioncable
+  - actionmailer
+  - actionpack
+  - actionview
+  - activejob
+  - activemodel
+  - activerecord
+  - activestorage
+  - activesupport
+
 domains: []
 reporters:
   - rubocop

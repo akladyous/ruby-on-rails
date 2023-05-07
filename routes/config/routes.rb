@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # draw(:singular_routes) -- including all routes defined in config/routes/singular_routes.rb
   # get("/", controller: :home, action: :index)
 
+
   # get 'students/:id', to: 'students#show', as: 'grades'
   # get "students/:id", controller: :students, action: 'show'
 
@@ -44,6 +45,7 @@ Rails.application.routes.draw do
   # :shallow_path
   # :format
   # :param
+  #
 
   # get "students/:id", to: "students#show", constraints: {id: /\d{1,2}/}
   # constraints(id: /\d{1,3}/) do
