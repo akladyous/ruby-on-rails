@@ -1,2 +1,0 @@
-class EventLocationTypesController < ApplicationController
-end

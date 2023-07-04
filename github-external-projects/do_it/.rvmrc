@@ -1,2 +1,0 @@
-rvm gemset create do_it
-rvm gemset use do_it

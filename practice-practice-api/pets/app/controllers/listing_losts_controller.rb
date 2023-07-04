@@ -1,3 +1,0 @@
-class ListingLostsController < ApplicationController
-
-end

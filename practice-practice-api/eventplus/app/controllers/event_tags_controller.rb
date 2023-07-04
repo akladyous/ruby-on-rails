@@ -1,2 +1,0 @@
-class EventTagsController < ApplicationController
-end
